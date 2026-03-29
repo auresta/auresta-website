@@ -13,8 +13,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-          {/* Brand + contact */}
-          <div className="md:col-span-2">
+          {/* Brand */}
+          <div>
             <div className="flex items-center mb-4">
               <Image
                 src="/images/logo-mark.png"
@@ -28,17 +28,20 @@ export default function Footer() {
                 <sup className="font-bold ml-0.5 pr-0.5" style={{ color: "#06b6d4", fontSize: "9px", verticalAlign: "super" }}>AI</sup>
               </div>
             </div>
-            <p className="text-sm text-text-secondary mb-4 leading-relaxed max-w-xs">
-              AI-powered cybersecurity for Australian SMEs — enterprise-grade protection at accessible price points, built on sovereign infrastructure.
+            <p className="text-sm text-text-secondary leading-relaxed">
+              AI-powered cybersecurity for Australian SMEs — enterprise-grade protection, built on sovereign infrastructure.
             </p>
-            <div className="space-y-1.5 text-sm text-text-muted">
-              <p>Auresta Pty Ltd &nbsp;·&nbsp; ABN 72 690 869 820</p>
-              <p>L12/350 Collins Street, Melbourne VIC 3000</p>
-              <div className="flex items-center gap-3 pt-1">
-                <a href="tel:+61399980428" className="hover:text-text-secondary transition-colors">(03) 9998 0428</a>
-                <span style={{ color: "rgba(255,255,255,0.2)" }}>|</span>
-                <a href="mailto:team@auresta.com.au" className="hover:text-text-secondary transition-colors" style={{ color: "#06b6d4" }}>team@auresta.com.au</a>
-              </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-xs font-semibold text-text-primary mb-4 uppercase tracking-widest">Contact</h4>
+            <div className="flex flex-col gap-2 text-sm text-text-muted">
+              <p>Auresta Pty Ltd</p>
+              <p>ABN 72 690 869 820</p>
+              <p>L12/350 Collins St<br />Melbourne VIC 3000</p>
+              <a href="tel:+61399980428" className="hover:text-text-secondary transition-colors">(03) 9998 0428</a>
+              <a href="mailto:team@auresta.com.au" className="hover:text-text-secondary transition-colors" style={{ color: "#06b6d4" }}>team@auresta.com.au</a>
             </div>
           </div>
 
@@ -57,9 +60,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-semibold text-text-primary mb-4 uppercase tracking-widest">
-              Company
-            </h4>
+            <h4 className="text-xs font-semibold text-text-primary mb-4 uppercase tracking-widest">Company</h4>
             <div className="flex flex-col gap-2.5">
               <Link href="/about" className="text-sm text-text-muted hover:text-text-secondary transition-colors">About</Link>
               <Link href="/contact" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Contact</Link>
@@ -80,7 +81,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-xs text-text-muted">
             <span>Australian Privacy Act 1988 Compliant</span>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
-            <span className="text-text-muted">Melbourne, Australia</span>
+            <span>Melbourne, Australia</span>
           </div>
         </div>
       </div>
