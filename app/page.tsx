@@ -93,7 +93,7 @@ const whyAuresta = [
   {
     icon: <ServerIcon />,
     title: "Sovereign Compute",
-    desc: "RTX Pro 6000 Blackwell on-premises inference — your vulnerability data never leaves Australian soil. No cloud. No offshore risk.",
+    desc: "On-premises AI inference — your vulnerability data never leaves Australian soil. No cloud. No offshore risk.",
   },
   {
     icon: <LayersIcon />,
@@ -312,9 +312,9 @@ export default function HomePage() {
             alt="Security operations"
             fill
             className="object-cover"
-            style={{ opacity: 0.35 }}
+            style={{ opacity: 0.5 }}
           />
-          <div className="absolute inset-0" style={{ backgroundColor: "rgba(14,20,33,0.96)" }} />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(14,20,33,0.82)" }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -336,8 +336,12 @@ export default function HomePage() {
       </section>
 
       {/* ── COMPLIANCE PRESSURE ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/cyber-lock.jpg" alt="Compliance" fill className="object-cover" style={{ opacity: 0.30 }} />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-6">
             The Regulatory Clock Is Ticking
           </h2>
@@ -373,7 +377,7 @@ export default function HomePage() {
 
       {/* ── CTA BANNER ── */}
       <section
-        className="py-16 px-4 sm:px-6 lg:px-8"
+        className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8"
         style={{
           background:
             "linear-gradient(135deg, rgba(6,182,212,0.1) 0%, rgba(59,130,246,0.08) 100%)",
@@ -381,7 +385,11 @@ export default function HomePage() {
           borderBottom: "1px solid rgba(6,182,212,0.2)",
         }}
       >
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/office-tech.jpg" alt="Security assessment" fill className="object-cover" style={{ opacity: 0.25 }} />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
+        </div>
+        <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
             Ready to know where you stand?
           </h2>
@@ -401,3 +409,4 @@ export default function HomePage() {
     </div>
   );
 }
+

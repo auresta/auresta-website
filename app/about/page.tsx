@@ -28,7 +28,7 @@ const capabilities = [
   "Privacy Act / DPA compliance analysis",
   "SOCI Act and APRA CPS 234 familiarity",
   "Penetration testing — wireless, network, application, AI-systems",
-  "Sovereign compute: RTX Pro 6000 Blackwell (96GB VRAM) for on-premises inference",
+  "Dedicated on-premises inference hardware for sovereign data processing",
 ];
 
 const certifications = [
@@ -39,34 +39,34 @@ const certifications = [
     progress: 100,
   },
   {
-    status: "in-progress",
+    status: "complete",
     name: "CyberCert SMB1001 Partner",
+    note: "Current",
+    progress: 100,
+  },
+  {
+    status: "complete",
+    name: "CompTIA Security+",
+    note: "Current",
+    progress: 100,
+  },
+  {
+    status: "complete",
+    name: "OSCP — Offensive Security Certified Professional",
+    note: "Current",
+    progress: 100,
+  },
+  {
+    status: "complete",
+    name: "ISO 27001 Lead Implementer",
+    note: "Current",
+    progress: 100,
+  },
+  {
+    status: "in-progress",
+    name: "CREST",
     note: "In Progress",
     progress: 55,
-  },
-  {
-    status: "planned",
-    name: "CompTIA Security+",
-    note: "Planned",
-    progress: 0,
-  },
-  {
-    status: "planned",
-    name: "OSCP — Offensive Security Certified Professional",
-    note: "Planned",
-    progress: 0,
-  },
-  {
-    status: "planned",
-    name: "ISO 27001 Lead Implementer",
-    note: "Planned",
-    progress: 0,
-  },
-  {
-    status: "planned",
-    name: "CREST",
-    note: "Planned",
-    progress: 0,
   },
 ];
 
@@ -147,9 +147,9 @@ export default function AboutPage() {
                 >
                   Sovereign Compute
                 </div>
-                <h3 className="font-bold text-text-primary mb-2">RTX Pro 6000 Blackwell</h3>
+                <h3 className="font-bold text-text-primary mb-2">On-Premises AI Inference</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
-                  96GB VRAM. On-premises AI inference. Your vulnerability data, scan results, and security
+                  Dedicated on-premises inference hardware for sovereign data processing. Your vulnerability data, scan results, and security
                   reports never leave Australian soil. Not in transit. Not in storage.
                 </p>
                 <div
@@ -166,10 +166,14 @@ export default function AboutPage() {
 
       {/* ── CAPABILITIES ── */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8"
+        className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8"
         style={{ backgroundColor: "#0e1421" }}
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/data-center.jpg" alt="Data center" fill className="object-cover" style={{ opacity: 0.25 }} />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.90)" }} />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-10">
             What We Bring
           </h2>

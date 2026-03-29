@@ -67,10 +67,10 @@ export default function ServicesPage() {
               style={{
                 backgroundColor: "#111827",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderTop: "3px solid #06b6d4",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.35)",
               }}
             >
+              <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
               <div className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "rgba(6,182,212,0.6)" }}>
                 Tier 1
               </div>
@@ -106,11 +106,11 @@ export default function ServicesPage() {
               className="rounded-lg p-7 relative"
               style={{
                 backgroundColor: "#141c2e",
-                border: "1px solid rgba(6,182,212,0.3)",
-                borderTop: "3px solid #06b6d4",
+                border: "1px solid rgba(255,255,255,0.12)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
               }}
             >
+              <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
               <div
                 className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-bold px-3 py-1 rounded-full"
                 style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
@@ -157,10 +157,10 @@ export default function ServicesPage() {
               style={{
                 backgroundColor: "#111827",
                 border: "1px solid rgba(255,255,255,0.08)",
-                borderTop: "3px solid #3b82f6",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.35)",
               }}
             >
+              <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
               <div className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "rgba(59,130,246,0.7)" }}>
                 Tier 3
               </div>
@@ -218,8 +218,12 @@ export default function ServicesPage() {
       </div>
 
       {/* ── SERVICE 2: AGENTIC THREAT SIMULATION ── */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#0e1421" }}>
-        <div className="max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: "#0e1421" }}>
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/hacker-dark.jpg" alt="Threat simulation" fill className="object-cover" style={{ opacity: 0.25 }} />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.85)" }} />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="flex items-center gap-3 mb-4">

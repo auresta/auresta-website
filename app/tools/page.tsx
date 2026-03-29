@@ -175,6 +175,12 @@ export default function ToolsPage() {
         </div>
       </section>
 
+      {/* ── DIVIDER IMAGE STRIP ── */}
+      <div className="relative w-full overflow-hidden" style={{ height: "160px" }}>
+        <Image src="/images/shield-security.jpg" alt="Security" fill className="object-cover" style={{ opacity: 0.35 }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #080b14 0%, transparent 20%, transparent 80%, #080b14 100%)" }} />
+      </div>
+
       {/* ── TOOLS GRID ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
