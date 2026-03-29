@@ -191,7 +191,7 @@ export default function HomePage() {
             fill
             priority
             className="object-cover"
-            style={{ opacity: 0.12 }}
+            style={{ opacity: 0.20 }}
           />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
@@ -312,7 +312,7 @@ export default function HomePage() {
             alt="Security operations"
             fill
             className="object-cover"
-            style={{ opacity: 0.06 }}
+            style={{ opacity: 0.18 }}
           />
           <div className="absolute inset-0" style={{ backgroundColor: "rgba(14,20,33,0.96)" }} />
         </div>

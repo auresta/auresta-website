@@ -20,7 +20,7 @@ export default function ServicesPage() {
             fill
             priority
             className="object-cover"
-            style={{ opacity: 0.10 }}
+            style={{ opacity: 0.22 }}
           />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), rgba(8,11,20,0.85)" }} />
         </div>

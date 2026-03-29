@@ -76,7 +76,7 @@ export default function ContactPage() {
             alt="Office"
             fill
             className="object-cover"
-            style={{ opacity: 0.08 }}
+            style={{ opacity: 0.22 }}
           />
           <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.92)" }} />
         </div>
