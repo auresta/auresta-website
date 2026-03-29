@@ -1,5 +1,25 @@
 import Link from "next/link";
 
+const CompleteIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" fill="rgba(6,182,212,0.15)"/>
+    <path d="m9 12 2 2 4-4"/>
+  </svg>
+);
+
+const InProgressIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" stroke="rgba(59,130,246,0.3)" strokeWidth="2"/>
+    <path d="M12 2a10 10 0 0 1 10 10" stroke="#3b82f6" strokeWidth="2.5"/>
+  </svg>
+);
+
+const PlannedIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2">
+    <circle cx="12" cy="12" r="10"/>
+  </svg>
+);
+
 const capabilities = [
   "Deep AI/ML systems integration (LLM infrastructure, agentic frameworks, sovereign compute)",
   "AIGP (AI Governance Professional) certified",
@@ -115,7 +135,14 @@ export default function AboutPage() {
                 >
                   Sovereign Compute
                 </div>
-                <div className="text-4xl mb-3">🖥️</div>
+                <div className="mb-3 flex items-center justify-center w-12 h-12 rounded-lg" style={{ backgroundColor: "rgba(6,182,212,0.1)", color: "#06b6d4" }}>
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="2" y="2" width="20" height="8" rx="2"/>
+                    <rect x="2" y="14" width="20" height="8" rx="2"/>
+                    <path d="M6 6h.01M6 18h.01"/>
+                    <path d="M10 6h4M10 18h4"/>
+                  </svg>
+                </div>
                 <h3 className="font-bold text-text-primary mb-2">RTX Pro 6000 Blackwell</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">
                   96GB VRAM. On-premises AI inference. Your vulnerability data, scan results, and security
@@ -125,7 +152,7 @@ export default function AboutPage() {
                   className="mt-4 pt-4 border-t text-xs font-mono"
                   style={{ borderColor: "rgba(255,255,255,0.06)", color: "rgba(6,182,212,0.5)" }}
                 >
-                  📍 Melbourne, Australia
+                  ⊕ Melbourne, Australia
                 </div>
               </div>
             </div>
@@ -195,8 +222,8 @@ export default function AboutPage() {
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-lg">
-                      {cert.status === "complete" ? "✅" : cert.status === "in-progress" ? "🔄" : "⬜"}
+                    <span className="flex-shrink-0">
+                      {cert.status === "complete" ? <CompleteIcon /> : cert.status === "in-progress" ? <InProgressIcon /> : <PlannedIcon />}
                     </span>
                     <div>
                       <p className="font-semibold text-text-primary text-sm">{cert.name}</p>
