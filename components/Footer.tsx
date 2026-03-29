@@ -15,17 +15,17 @@ export default function Footer() {
 
           {/* Brand + contact */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center mb-4">
               <Image
                 src="/images/logo-mark.png"
                 alt="Auresta"
-                width={26}
-                height={26}
-                style={{ mixBlendMode: "screen" }}
+                width={38}
+                height={38}
+                style={{ mixBlendMode: "screen", filter: "brightness(1.4) contrast(1.2)" }}
               />
-              <div className="flex items-baseline gap-0">
-                <span className="text-xl font-bold tracking-wider text-text-primary">AURESTA</span>
-                <sup className="text-xs font-bold ml-0.5" style={{ color: "#06b6d4" }}>AI</sup>
+              <div className="flex items-baseline ml-1">
+                <span className="font-black tracking-widest text-white" style={{ fontSize: "17px", letterSpacing: "0.14em" }}>AURESTA</span>
+                <sup className="font-bold ml-0.5" style={{ color: "#06b6d4", fontSize: "9px", verticalAlign: "super" }}>AI</sup>
               </div>
             </div>
             <p className="text-sm text-text-secondary mb-4 leading-relaxed max-w-xs">

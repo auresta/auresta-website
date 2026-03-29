@@ -19,24 +19,31 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="group flex items-center relative">
+            {/* Shared subtle background pill */}
+            <div
+              className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+              style={{ background: "rgba(6,182,212,0.06)" }}
+            />
+            {/* Icon — larger, brighter */}
             <Image
               src="/images/logo-mark.png"
               alt="Auresta"
-              width={28}
-              height={28}
-              style={{ mixBlendMode: "screen" }}
+              width={40}
+              height={40}
+              style={{ mixBlendMode: "screen", filter: "brightness(1.4) contrast(1.2)" }}
             />
-            <div className="flex items-baseline gap-0">
+            {/* Wordmark — tight to icon */}
+            <div className="flex items-baseline leading-none ml-1">
               <span
-                className="text-xl font-bold tracking-wider text-text-primary group-hover:text-white transition-colors"
-                style={{ fontFamily: "Inter, sans-serif" }}
+                className="font-black tracking-widest text-white transition-colors"
+                style={{ fontSize: "17px", letterSpacing: "0.14em" }}
               >
                 AURESTA
               </span>
               <sup
-                className="text-xs font-bold ml-0.5"
-                style={{ color: "#06b6d4" }}
+                className="font-bold ml-0.5"
+                style={{ color: "#06b6d4", fontSize: "9px", verticalAlign: "super" }}
               >
                 AI
               </sup>
