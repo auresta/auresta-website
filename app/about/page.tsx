@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const CompleteIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -98,9 +99,22 @@ export default function AboutPage() {
 
       {/* ── OUR STORY ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-            <div className="lg:col-span-3">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative rounded-xl overflow-hidden" style={{ height: "400px" }}>
+              <Image
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=85&auto=format&fit=crop"
+                alt="Security engineering team"
+                fill
+                className="object-cover"
+              />
+              {/* Subtle dark overlay to match site palette */}
+              <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(8,11,20,0.3) 0%, rgba(6,182,212,0.05) 100%)" }} />
+            </div>
+
+            {/* Text */}
+            <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6">Our Story</h2>
               <div className="space-y-5 text-text-secondary leading-relaxed">
                 <p>
@@ -118,11 +132,9 @@ export default function AboutPage() {
                   most — without the enterprise price tag or the 6-month engagement timeline.
                 </p>
               </div>
-            </div>
 
-            <div className="lg:col-span-2">
               <div
-                className="rounded-lg p-7"
+                className="mt-8 rounded-lg p-6"
                 style={{
                   backgroundColor: "#111827",
                   border: "1px solid rgba(6,182,212,0.2)",
@@ -130,18 +142,10 @@ export default function AboutPage() {
                 }}
               >
                 <div
-                  className="text-xs font-mono uppercase tracking-widest mb-4"
+                  className="text-xs font-mono uppercase tracking-widest mb-3"
                   style={{ color: "rgba(6,182,212,0.6)" }}
                 >
                   Sovereign Compute
-                </div>
-                <div className="mb-3 flex items-center justify-center w-12 h-12 rounded-lg" style={{ backgroundColor: "rgba(6,182,212,0.1)", color: "#06b6d4" }}>
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="8" rx="2"/>
-                    <rect x="2" y="14" width="20" height="8" rx="2"/>
-                    <path d="M6 6h.01M6 18h.01"/>
-                    <path d="M10 6h4M10 18h4"/>
-                  </svg>
                 </div>
                 <h3 className="font-bold text-text-primary mb-2">RTX Pro 6000 Blackwell</h3>
                 <p className="text-sm text-text-secondary leading-relaxed">

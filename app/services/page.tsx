@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const verticals = ["Healthcare", "Construction & Engineering", "Agriculture", "Professional Services"];
 
@@ -187,9 +188,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div style={{ height: "1px", backgroundColor: "rgba(255,255,255,0.06)" }} />
+      {/* ── IMAGE DIVIDER BANNER ── */}
+      <div className="relative w-full my-4 overflow-hidden" style={{ height: "200px" }}>
+        <Image
+          src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&q=85&auto=format&fit=crop"
+          alt="Network security"
+          fill
+          className="object-cover"
+          style={{ opacity: 0.3 }}
+        />
+        <div className="absolute inset-0" style={{
+          background: "linear-gradient(to right, #080b14 0%, transparent 30%, transparent 70%, #080b14 100%)"
+        }} />
+        <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+          <p className="text-lg font-semibold" style={{ color: "#94a3b8" }}>
+            &ldquo;AI-powered adversaries don&apos;t work business hours. Neither do we.&rdquo;
+          </p>
+        </div>
       </div>
 
       {/* ── SERVICE 2: AGENTIC THREAT SIMULATION ── */}

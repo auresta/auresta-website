@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import TerminalAnimation from "@/components/TerminalAnimation";
 
 const stats = [
@@ -182,7 +183,18 @@ export default function HomePage() {
             "radial-gradient(ellipse 80% 60% at -5% 0%, rgba(6,182,212,0.12) 0%, transparent 60%), #080b14",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        {/* Atmospheric background image — very subtle texture */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=85&auto=format&fit=crop"
+            alt="Server infrastructure"
+            fill
+            priority
+            className="object-cover"
+            style={{ opacity: 0.12 }}
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left — copy */}
             <div>
