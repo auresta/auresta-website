@@ -19,13 +19,13 @@ export default function Footer() {
               <Image
                 src="/images/logo-mark.png"
                 alt="Auresta"
-                width={38}
-                height={38}
-                style={{ mixBlendMode: "screen", filter: "brightness(1.4) contrast(1.2)" }}
+                width={36}
+                height={36}
+                style={{ mixBlendMode: "screen", filter: "brightness(1.5) contrast(1.2)", flexShrink: 0 }}
               />
-              <div className="flex items-baseline ml-1">
-                <span className="font-black tracking-widest text-white" style={{ fontSize: "17px", letterSpacing: "0.14em" }}>AURESTA</span>
-                <sup className="font-bold ml-0.5" style={{ color: "#06b6d4", fontSize: "9px", verticalAlign: "super" }}>AI</sup>
+              <div className="flex items-baseline leading-none pr-1">
+                <span className="font-black text-white" style={{ fontSize: "17px", letterSpacing: "0.13em" }}>AURESTA</span>
+                <sup className="font-bold ml-0.5 pr-0.5" style={{ color: "#06b6d4", fontSize: "9px", verticalAlign: "super" }}>AI</sup>
               </div>
             </div>
             <p className="text-sm text-text-secondary mb-4 leading-relaxed max-w-xs">

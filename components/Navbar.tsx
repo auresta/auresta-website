@@ -21,8 +21,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="group flex items-center rounded-lg px-2 py-1.5"
-            style={{ background: "rgba(255,255,255,0.06)" }}
+            className="group flex items-center rounded-lg px-2 py-1.5 transition-all"
+            style={{ background: "transparent" }}
+            onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,255,255,0.06)")}
+            onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
           >
             {/* Icon */}
             <Image
