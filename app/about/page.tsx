@@ -104,9 +104,9 @@ export default function AboutPage() {
       {/* ── OUR STORY ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             {/* Image */}
-            <div className="relative rounded-xl overflow-hidden" style={{ height: "400px" }}>
+            <div className="relative rounded-xl overflow-hidden" style={{ minHeight: "400px" }}>
               <Image
                 src="/images/about-team.jpg"
                 alt="Security engineering team"
