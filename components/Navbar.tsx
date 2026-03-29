@@ -36,6 +36,12 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             <Link
+              href="/products"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Products
+            </Link>
+            <Link
               href="/services"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
@@ -46,12 +52,6 @@ export default function Navbar() {
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
               Tools
-            </Link>
-            <Link
-              href="/products"
-              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
-            >
-              Products
             </Link>
             <Link
               href="/about"
@@ -116,6 +116,13 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-4">
               <Link
+                href="/products"
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Products
+              </Link>
+              <Link
                 href="/services"
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"
                 onClick={() => setMenuOpen(false)}
@@ -128,13 +135,6 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
               >
                 Tools
-              </Link>
-              <Link
-                href="/products"
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"
-                onClick={() => setMenuOpen(false)}
-              >
-                Products
               </Link>
               <Link
                 href="/about"
