@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MouseTrail from "@/components/MouseTrail";
 
 export const metadata: Metadata = {
   title: "Auresta AI — AI-Powered Cybersecurity for Australian Business",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MouseTrail />
       </body>
     </html>
   );

@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import TiltCard from "@/components/TiltCard";
 
 const CompleteIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -180,8 +183,8 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {capabilities.map((cap) => (
+              <TiltCard key={cap}>
               <div
-                key={cap}
                 className="flex items-start gap-3 p-4 rounded-lg"
                 style={{
                   backgroundColor: "#141c2e",
@@ -196,6 +199,7 @@ export default function AboutPage() {
                 </span>
                 <p className="text-sm text-text-secondary leading-relaxed">{cap}</p>
               </div>
+              </TiltCard>
             ))}
           </div>
         </div>
@@ -213,8 +217,8 @@ export default function AboutPage() {
 
           <div className="space-y-5">
             {certifications.map((cert) => (
+              <TiltCard key={cert.name}>
               <div
-                key={cert.name}
                 className="p-5 rounded-lg"
                 style={{
                   backgroundColor: "#111827",
@@ -277,6 +281,7 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
+              </TiltCard>
             ))}
           </div>
         </div>

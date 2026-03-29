@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import TiltCard from "@/components/TiltCard";
 
 const verticals = ["Healthcare", "Construction & Engineering", "Agriculture", "Professional Services"];
 
@@ -62,6 +65,7 @@ export default function ServicesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Tier 1 */}
+            <TiltCard>
             <div
               className="rounded-lg p-7"
               style={{
@@ -100,8 +104,10 @@ export default function ServicesPage() {
                 <p className="text-xs text-text-muted">Best for: First assessment, insurance application, board reporting</p>
               </div>
             </div>
+            </TiltCard>
 
             {/* Tier 2 */}
+            <TiltCard>
             <div
               className="rounded-lg p-7 relative"
               style={{
@@ -150,8 +156,10 @@ export default function ServicesPage() {
                 <p className="text-xs text-text-muted">Best for: Organisations facing insurer scrutiny or post-incident review</p>
               </div>
             </div>
+            </TiltCard>
 
             {/* Tier 3 */}
+            <TiltCard>
             <div
               className="rounded-lg p-7"
               style={{
@@ -194,6 +202,7 @@ export default function ServicesPage() {
                 <p className="text-xs text-text-muted">Best for: Ongoing compliance, regulated industries, APRA/SOCI entities</p>
               </div>
             </div>
+            </TiltCard>
           </div>
         </div>
       </section>
@@ -314,8 +323,8 @@ export default function ServicesPage() {
                     desc: "Full attack narrative, evidence chain, CVSS-rated findings, business impact, and prioritised remediation. Board and technical versions.",
                   },
                 ].map((p) => (
+                  <TiltCard key={p.phase}>
                   <div
-                    key={p.phase}
                     className="flex gap-4 p-5 rounded-lg"
                     style={{
                       backgroundColor: "#111827",
@@ -334,6 +343,7 @@ export default function ServicesPage() {
                       <p className="text-sm text-text-secondary leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
+                  </TiltCard>
                 ))}
               </div>
 
@@ -411,6 +421,7 @@ export default function ServicesPage() {
             {[
               {
                 title: "Architecture Security Review",
+
                 price: "$5,000 – $12,000",
                 items: [
                   "Full system threat model (STRIDE framework)",
@@ -454,8 +465,8 @@ export default function ServicesPage() {
                 ],
               },
             ].map((item) => (
+              <TiltCard key={item.title}>
               <div
-                key={item.title}
                 className="rounded-lg p-7"
                 style={{
                   backgroundColor: "#111827",
@@ -475,6 +486,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
               </div>
+              </TiltCard>
             ))}
           </div>
         </div>

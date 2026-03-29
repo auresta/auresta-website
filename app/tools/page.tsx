@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import TiltCard from "@/components/TiltCard";
 
 const E8Icon = () => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -85,6 +86,7 @@ function ToolCard({ tool }: { tool: typeof tools[0] }) {
   const [shadow, setShadow] = useState(defaultShadow);
 
   return (
+    <TiltCard>
     <div
       className="relative rounded-xl p-6 flex flex-col transition-all duration-300"
       style={{
@@ -127,6 +129,7 @@ function ToolCard({ tool }: { tool: typeof tools[0] }) {
       <h3 className="text-lg font-bold text-text-primary mb-2">{tool.title}</h3>
       <p className="text-sm text-text-secondary leading-relaxed flex-1">{tool.desc}</p>
     </div>
+    </TiltCard>
   );
 }
 

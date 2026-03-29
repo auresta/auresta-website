@@ -4,13 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import TerminalAnimation from "@/components/TerminalAnimation";
-
-const stats = [
-  { value: "USD 10B+", label: "AU Cybersecurity Market" },
-  { value: "Every 6 Min", label: "Cybercrime Reported in AU" },
-  { value: "30,000", label: "Security Professional Shortage" },
-  { value: "~$46K", label: "Average SME Incident Cost" },
-];
+import ParticleNetwork from "@/components/ParticleNetwork";
+import StatBar from "@/components/StatBar";
+import TiltCard from "@/components/TiltCard";
 
 const MagnifyingGlassIcon = () => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -120,6 +116,7 @@ const hoverShadow = "0 4px 24px rgba(0,0,0,0.5), 0 0 0 1px rgba(6,182,212,0.15)"
 function ServiceCardInline({ svc }: { svc: { title: string; description: string; price: string; icon: React.ReactNode } }) {
   const [shadow, setShadow] = useState(defaultShadow);
   return (
+    <TiltCard>
     <div
       className="relative rounded-xl p-6 flex flex-col transition-all duration-300"
       style={{
@@ -127,6 +124,7 @@ function ServiceCardInline({ svc }: { svc: { title: string; description: string;
         border: "1px solid rgba(255,255,255,0.07)",
         borderRadius: "12px",
         boxShadow: shadow,
+        height: "100%",
       }}
       onMouseEnter={() => setShadow(hoverShadow)}
       onMouseLeave={() => setShadow(defaultShadow)}
@@ -145,12 +143,14 @@ function ServiceCardInline({ svc }: { svc: { title: string; description: string;
         Learn more →
       </Link>
     </div>
+    </TiltCard>
   );
 }
 
 function WhyCard({ item }: { item: { icon: React.ReactNode; title: string; desc: string } }) {
   const [shadow, setShadow] = useState(defaultShadow);
   return (
+    <TiltCard>
     <div
       className="rounded-xl p-7 transition-all duration-300"
       style={{
@@ -169,6 +169,7 @@ function WhyCard({ item }: { item: { icon: React.ReactNode; title: string; desc:
       <h3 className="text-lg font-bold text-text-primary mb-3">{item.title}</h3>
       <p className="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
     </div>
+    </TiltCard>
   );
 }
 
@@ -194,6 +195,8 @@ export default function HomePage() {
             style={{ opacity: 0.35 }}
           />
         </div>
+        {/* Particle network overlay */}
+        <ParticleNetwork />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left — copy */}
@@ -214,7 +217,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-text-primary mb-6">
-                AI-Powered{" "}
+                <span className="shimmer-text">AI-Powered</span>{" "}
                 <span style={{ color: "#06b6d4" }}>Cybersecurity</span>
                 <br />
                 for Australian Business
@@ -263,21 +266,7 @@ export default function HomePage() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((s) => (
-              <div key={s.value} className="text-center">
-                <div
-                  className="text-2xl sm:text-3xl font-black mb-1"
-                  style={{ color: "#06b6d4" }}
-                >
-                  {s.value}
-                </div>
-                <div className="text-xs sm:text-sm text-text-muted">
-                  {s.label}
-                </div>
-              </div>
-            ))}
-          </div>
+          <StatBar />
         </div>
       </section>
 

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { useState } from "react";
+import TiltCard from "@/components/TiltCard";
 
 const MagnifyingGlassIcon = () => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -63,6 +64,7 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
   const [shadow, setShadow] = useState(defaultShadow);
 
   return (
+    <TiltCard>
     <div
       className="relative rounded-xl p-6 transition-all duration-300 flex flex-col"
       style={{
@@ -115,6 +117,7 @@ function ServiceCard({ svc }: { svc: typeof services[0] }) {
         Learn more →
       </Link>
     </div>
+    </TiltCard>
   );
 }
 
