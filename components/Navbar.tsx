@@ -48,6 +48,12 @@ export default function Navbar() {
               Tools
             </Link>
             <Link
+              href="/products"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              Products
+            </Link>
+            <Link
               href="/about"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
@@ -122,6 +128,13 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
               >
                 Tools
+              </Link>
+              <Link
+                href="/products"
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                Products
               </Link>
               <Link
                 href="/about"
