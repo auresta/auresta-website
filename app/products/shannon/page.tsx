@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import TiltCard from "@/components/TiltCard";
+import EarlyAccessForm from "@/components/EarlyAccessForm";
 
 const CheckIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -156,6 +157,12 @@ export default function ShannonPage() {
         </div>
       </section>
 
+      {/* ── IMAGE STRIP ── */}
+      <div className="relative w-full overflow-hidden" style={{ height: "220px" }}>
+        <Image src="/images/code-terminal.jpg" alt="Shannon Engine" fill className="object-cover" style={{ opacity: 0.45 }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, #080b14 0%, transparent 15%, transparent 85%, #080b14 100%), linear-gradient(to bottom, #080b14 0%, transparent 20%, transparent 80%, #080b14 100%)" }} />
+      </div>
+
       {/* ── 4-PHASE FLOW ── */}
       <section
         className="py-24 px-4 sm:px-6 lg:px-8"
@@ -234,13 +241,15 @@ export default function ShannonPage() {
 
       {/* ── SAFETY STACK ── */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8"
+        className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         style={{
           backgroundColor: "#0a0f1a",
           borderTop: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        <div className="max-w-5xl mx-auto">
+        <Image src="/images/hacker-screen.jpg" alt="" fill className="object-cover" style={{ opacity: 0.18 }} />
+        <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
+        <div className="max-w-5xl mx-auto relative z-10">
           <div className="text-center mb-14">
             <p
               className="text-xs font-mono uppercase tracking-widest mb-3"
@@ -297,10 +306,12 @@ export default function ShannonPage() {
 
       {/* ── TECH STACK ── */}
       <section
-        className="py-24 px-4 sm:px-6 lg:px-8"
+        className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
         style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}
       >
-        <div className="max-w-4xl mx-auto">
+        <Image src="/images/network-attack.jpg" alt="" fill className="object-cover" style={{ opacity: 0.15 }} />
+        <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.9)" }} />
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-14">
             <p
               className="text-xs font-mono uppercase tracking-widest mb-3"
@@ -396,29 +407,18 @@ export default function ShannonPage() {
         </div>
       </section>
 
-      {/* ── BOTTOM CTA ── */}
-      <section
-        className="py-20 px-4 sm:px-6 lg:px-8 text-center"
-        style={{
-          background:
-            "linear-gradient(135deg, rgba(251,146,60,0.08) 0%, rgba(8,11,20,1) 100%)",
-          borderTop: "1px solid rgba(251,146,60,0.15)",
-        }}
-      >
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-3">
-            Shannon isn&apos;t available to the public yet.
-          </h2>
-          <p className="text-text-secondary mb-8 text-lg">
-            We&apos;re onboarding design partners. If you want AI-driven offensive security before the public launch, apply now.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-md font-bold transition-all hover:opacity-90"
-            style={{ backgroundColor: "#fb923c", color: "#080b14" }}
-          >
-            Apply for Early Access
-          </Link>
+      {/* ── Early Access Form ── */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image src="/images/shannon-ai.jpg" alt="" fill className="object-cover" style={{ opacity: 0.12 }} />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.92)" }} />
+        </div>
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-text-primary mb-3">Request Early Access</h2>
+            <p className="text-text-secondary">Shannon isn&apos;t publicly available yet. We&apos;re onboarding a small number of design partners for Q2 2026.</p>
+          </div>
+          <EarlyAccessForm />
         </div>
       </section>
     </div>

@@ -63,15 +63,18 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             {/* Tier 1 */}
-            <TiltCard>
+            <TiltCard className="h-full">
             <div
               className="rounded-lg p-7"
               style={{
                 backgroundColor: "#111827",
                 border: "1px solid rgba(255,255,255,0.08)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.35)",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
@@ -82,7 +85,7 @@ export default function ServicesPage() {
               <div className="text-xl font-black mb-4" style={{ color: "#06b6d4" }}>
                 $3,500 – $5,000
               </div>
-              <ul className="space-y-2 text-sm text-text-secondary">
+              <ul className="space-y-2 text-sm text-text-secondary flex-grow">
                 <li className="flex items-start gap-2">
                   <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Essential Eight scorecard
@@ -100,20 +103,23 @@ export default function ServicesPage() {
                   Cyber insurance readiness statement
                 </li>
               </ul>
-              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.06)", marginTop: "auto" }}>
                 <p className="text-xs text-text-muted">Best for: First assessment, insurance application, board reporting</p>
               </div>
             </div>
             </TiltCard>
 
             {/* Tier 2 */}
-            <TiltCard>
+            <TiltCard className="h-full">
             <div
               className="rounded-lg p-7 relative"
               style={{
                 backgroundColor: "#141c2e",
                 border: "1px solid rgba(255,255,255,0.12)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
@@ -130,7 +136,7 @@ export default function ServicesPage() {
               <div className="text-xl font-black mb-4" style={{ color: "#06b6d4" }}>
                 $8,000 – $15,000
               </div>
-              <ul className="space-y-2 text-sm text-text-secondary">
+              <ul className="space-y-2 text-sm text-text-secondary flex-grow">
                 <li className="flex items-start gap-2">
                   <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Everything in Tier 1
@@ -152,20 +158,23 @@ export default function ServicesPage() {
                   Remediation roadmap with cost estimates
                 </li>
               </ul>
-              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(6,182,212,0.15)" }}>
+              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(6,182,212,0.15)", marginTop: "auto" }}>
                 <p className="text-xs text-text-muted">Best for: Organisations facing insurer scrutiny or post-incident review</p>
               </div>
             </div>
             </TiltCard>
 
             {/* Tier 3 */}
-            <TiltCard>
+            <TiltCard className="h-full">
             <div
               className="rounded-lg p-7"
               style={{
                 backgroundColor: "#111827",
                 border: "1px solid rgba(255,255,255,0.08)",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.35)",
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
               }}
             >
               <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.15) 50%, transparent)", marginBottom: "20px" }} />
@@ -176,7 +185,7 @@ export default function ServicesPage() {
               <div className="text-xl font-black mb-4" style={{ color: "#3b82f6" }}>
                 $2,500 – $5,000/month
               </div>
-              <ul className="space-y-2 text-sm text-text-secondary">
+              <ul className="space-y-2 text-sm text-text-secondary flex-grow">
                 <li className="flex items-start gap-2">
                   <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Monthly security posture reports
@@ -198,7 +207,7 @@ export default function ServicesPage() {
                   Priority incident response support
                 </li>
               </ul>
-              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+              <div className="mt-6 pt-4 border-t" style={{ borderColor: "rgba(255,255,255,0.06)", marginTop: "auto" }}>
                 <p className="text-xs text-text-muted">Best for: Ongoing compliance, regulated industries, APRA/SOCI entities</p>
               </div>
             </div>
