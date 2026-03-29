@@ -25,11 +25,11 @@ const PlannedIcon = () => (
 );
 
 const capabilities = [
-  "Deep AI/ML systems integration (LLM infrastructure, agentic frameworks, sovereign compute)",
   "AIGP (AI Governance Professional) certified",
   "Essential Eight implementation experience",
-  "Privacy Act / DPA compliance analysis",
   "SOCI Act and APRA CPS 234 familiarity",
+  "Privacy Act / DPA compliance analysis",
+  "Deep AI/ML systems integration (LLM infrastructure, agentic frameworks, sovereign compute)",
   "Penetration testing — wireless, network, application, AI-systems",
   "Dedicated on-premises inference hardware for sovereign data processing",
 ];
