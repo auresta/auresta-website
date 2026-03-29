@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -18,19 +19,28 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-baseline gap-0.5 group">
-            <span
-              className="text-xl font-bold tracking-wider text-text-primary group-hover:text-white transition-colors"
-              style={{ fontFamily: "Inter, sans-serif" }}
-            >
-              AURESTA
-            </span>
-            <sup
-              className="text-xs font-bold ml-0.5"
-              style={{ color: "#06b6d4" }}
-            >
-              AI
-            </sup>
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/images/logo-mark.png"
+              alt="Auresta"
+              width={28}
+              height={28}
+              style={{ mixBlendMode: "screen" }}
+            />
+            <div className="flex items-baseline gap-0">
+              <span
+                className="text-xl font-bold tracking-wider text-text-primary group-hover:text-white transition-colors"
+                style={{ fontFamily: "Inter, sans-serif" }}
+              >
+                AURESTA
+              </span>
+              <sup
+                className="text-xs font-bold ml-0.5"
+                style={{ color: "#06b6d4" }}
+              >
+                AI
+              </sup>
+            </div>
           </Link>
 
           {/* Desktop nav */}

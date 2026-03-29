@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html><head><style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+  body { background: #080b14; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; font-family: Inter, sans-serif; gap: 48px; margin: 0; padding: 40px; box-sizing: border-box; }
+  .label { color: #475569; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; }
+  /* Navbar mock */
+  .navbar { background: rgba(8,11,20,0.95); border-bottom: 1px solid rgba(255,255,255,0.08); padding: 0 32px; height: 64px; display: flex; align-items: center; gap: 40px; width: 700px; border-radius: 8px; }
+  .logo-wrap { display: flex; align-items: center; gap: 10px; }
+  .logo-img-sm { width: 30px; height: 30px; object-fit: contain; }
+  .logo-img-lg { width: 72px; height: 72px; object-fit: contain; }
+  .wordmark-sm { font-size: 17px; font-weight: 700; letter-spacing: 0.12em; color: #f1f5f9; }
+  .wordmark-lg { font-size: 42px; font-weight: 900; letter-spacing: 0.14em; color: #f1f5f9; }
+  .sup { font-size: 10px; font-weight: 700; color: #06b6d4; vertical-align: super; margin-left: 2px; }
+  .sup-lg { font-size: 16px; font-weight: 700; color: #06b6d4; vertical-align: super; margin-left: 3px; }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links span { font-size: 13px; color: #64748b; }
+  .cta { margin-left: auto; background: #06b6d4; color: #080b14; padding: 8px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; }
+  /* Large card */
+  .card { background: #0e1421; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 48px 56px; display: flex; align-items: center; gap: 20px; }
+  /* Footer */
+  .footer-brand { display: flex; align-items: baseline; gap: 8px; }
+  .footer-img { width: 22px; height: 22px; object-fit: contain; vertical-align: middle; }
+</style></head>
+<body>
+  <div class="label">Navbar</div>
+  <div class="navbar">
+    <div class="logo-wrap">
+      <img class="logo-img-sm" src="https://v3b.fal.media/files/b/0a941c49/x3AbmM6HuDcTaOCXLMka4_9bd63caf56d447a9a574242a3e3949b6.png">
+      <span class="wordmark-sm">AURESTA<span class="sup">AI</span></span>
+    </div>
+    <div class="nav-links">
+      <span>Products</span><span>Services</span><span>Tools</span><span>About</span>
+    </div>
+    <div class="cta">Book Assessment</div>
+  </div>
+
+  <div class="label">Hero / Standalone</div>
+  <div class="card">
+    <img class="logo-img-lg" src="https://v3b.fal.media/files/b/0a941c49/x3AbmM6HuDcTaOCXLMka4_9bd63caf56d447a9a574242a3e3949b6.png">
+    <span class="wordmark-lg">AURESTA<span class="sup-lg">AI</span></span>
+  </div>
+
+  <div class="label">Footer</div>
+  <div style="display:flex; align-items:center; gap:8px;">
+    <img class="footer-img" src="https://v3b.fal.media/files/b/0a941c49/x3AbmM6HuDcTaOCXLMka4_9bd63caf56d447a9a574242a3e3949b6.png">
+    <span class="wordmark-sm">AURESTA<span class="sup">AI</span></span>
+  </div>
+</body></html>

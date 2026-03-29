@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -14,9 +15,18 @@ export default function Footer() {
 
           {/* Brand + contact */}
           <div className="md:col-span-2">
-            <div className="flex items-baseline gap-0.5 mb-4">
-              <span className="text-xl font-bold tracking-wider text-text-primary">AURESTA</span>
-              <sup className="text-xs font-bold ml-0.5" style={{ color: "#06b6d4" }}>AI</sup>
+            <div className="flex items-center gap-2 mb-4">
+              <Image
+                src="/images/logo-mark.png"
+                alt="Auresta"
+                width={26}
+                height={26}
+                style={{ mixBlendMode: "screen" }}
+              />
+              <div className="flex items-baseline gap-0">
+                <span className="text-xl font-bold tracking-wider text-text-primary">AURESTA</span>
+                <sup className="text-xs font-bold ml-0.5" style={{ color: "#06b6d4" }}>AI</sup>
+              </div>
             </div>
             <p className="text-sm text-text-secondary mb-4 leading-relaxed max-w-xs">
               AI-powered cybersecurity for Australian SMEs — enterprise-grade protection at accessible price points, built on sovereign infrastructure.
