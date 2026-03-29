@@ -70,7 +70,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-xs text-text-muted">
             <span>Australian Privacy Act 1988 Compliant</span>
             <span style={{ color: "rgba(255,255,255,0.2)" }}>·</span>
-            <span style={{ color: "#06b6d4" }}>🇦🇺 Australian Owned &amp; Operated</span>
+            <span className="text-text-muted">Melbourne, Australia</span>
           </div>
         </div>
       </div>
