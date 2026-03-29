@@ -229,13 +229,15 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://calendly.com/team-auresta/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:opacity-90"
                   style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
                 >
                   Book a Free Assessment
-                </Link>
+                </a>
                 <Link
                   href="/services"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:bg-white/5"
@@ -386,13 +388,15 @@ export default function HomePage() {
             Book a free 30-minute security assessment. No obligation, no sales
             pressure — just an honest baseline.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="https://calendly.com/team-auresta/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-8 py-4 rounded-md font-bold text-base transition-all hover:opacity-90"
             style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
           >
             Book a Free 30-Minute Security Assessment
-          </Link>
+          </a>
         </div>
       </section>
     </div>

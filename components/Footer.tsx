@@ -53,7 +53,7 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5">
               <Link href="/about" className="text-sm text-text-muted hover:text-text-secondary transition-colors">About</Link>
               <Link href="/contact" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Contact</Link>
-              <Link href="/contact" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Book Assessment</Link>
+              <a href="https://calendly.com/team-auresta/30min" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors" style={{ color: "#06b6d4" }}>Book Assessment →</a>
               <Link href="/privacy" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Privacy Policy</Link>
             </div>
           </div>

@@ -65,8 +65,10 @@ export default function Navbar() {
             >
               Contact
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="https://calendly.com/team-auresta/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-semibold px-4 py-2 rounded-md transition-all navbar-cta"
               style={{
                 backgroundColor: "#06b6d4",
@@ -74,7 +76,7 @@ export default function Navbar() {
               }}
             >
               Book Assessment
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -150,14 +152,16 @@ export default function Navbar() {
               >
                 Contact
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href="https://calendly.com/team-auresta/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-semibold px-4 py-2 rounded-md text-center mx-2"
                 style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
                 onClick={() => setMenuOpen(false)}
               >
                 Book Assessment
-              </Link>
+              </a>
             </div>
           </div>
         )}
