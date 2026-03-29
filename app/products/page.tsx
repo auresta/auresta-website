@@ -254,7 +254,7 @@ export default function ProductsPage() {
                   </p>
 
                   {/* Bullets */}
-                  <ul className="space-y-2 mb-6 flex-1">
+                  <ul className="space-y-2 mb-6 flex-grow">
                     {p.bullets.map((b) => (
                       <li key={b} className="flex items-start gap-2 text-sm text-text-secondary">
                         <span
@@ -276,22 +276,11 @@ export default function ProductsPage() {
                   {/* CTA */}
                   <Link
                     href={p.ctaHref}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-sm font-semibold transition-all hover:opacity-90"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-md text-sm font-semibold transition-all hover:opacity-90 mt-auto"
                     style={p.ctaStyle}
                   >
                     {p.ctaLabel}
                   </Link>
-
-                  {/* Detail page link for Shannon */}
-                  {p.href !== p.ctaHref && (
-                    <Link
-                      href={p.href}
-                      className="inline-flex items-center gap-1 mt-3 text-xs font-medium transition-colors hover:opacity-80"
-                      style={{ color: p.accentColor }}
-                    >
-                      Learn more <ArrowRight />
-                    </Link>
-                  )}
                 </div>
               </div>
             </TiltCard>
