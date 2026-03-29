@@ -174,10 +174,10 @@ export default function ShannonPage() {
             </h2>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 items-stretch lg:items-stretch">
             {phases.map((phase, idx) => (
-              <div key={phase.number} className="flex flex-col lg:flex-row items-center flex-1 min-w-0">
-                <TiltCard className="flex-1 w-full">
+              <div key={phase.number} className="flex flex-col lg:flex-row items-stretch flex-1 min-w-0">
+                <TiltCard className="flex-1 w-full h-full">
                   <div
                     style={{
                       backgroundColor: "#0f1623",
