@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const trustBadges = [
   { icon: "🏅", label: "AIGP Certified" },
@@ -64,20 +65,30 @@ export default function ContactPage() {
     <div className="animate-fade-in-up">
       {/* Header */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), #080b14",
           borderBottom: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-black text-text-primary mb-4">
-            Start with a Free Assessment
-          </h1>
-          <p className="text-lg text-text-secondary">
-            We&apos;ll spend 30 minutes mapping your Essential Eight baseline — no obligation, no sales pressure.
-          </p>
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/contact-bg.jpg"
+            alt="Office"
+            fill
+            className="object-cover"
+            style={{ opacity: 0.08 }}
+          />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.92)" }} />
+        </div>
+        <div className="relative z-10">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl sm:text-5xl font-black text-text-primary mb-4">
+              Start with a Free Assessment
+            </h1>
+            <p className="text-lg text-text-secondary">
+              We&apos;ll spend 30 minutes mapping your Essential Eight baseline — no obligation, no sales pressure.
+            </p>
+          </div>
         </div>
       </section>
 

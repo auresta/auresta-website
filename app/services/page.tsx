@@ -8,13 +8,23 @@ export default function ServicesPage() {
     <div className="animate-fade-in-up">
       {/* Header */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), #080b14",
           borderBottom: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/services-hero.jpg"
+            alt="Cybersecurity services"
+            fill
+            priority
+            className="object-cover"
+            style={{ opacity: 0.10 }}
+          />
+          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), rgba(8,11,20,0.85)" }} />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-black text-text-primary mb-4">
             Our Services
           </h1>
@@ -348,9 +358,23 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div style={{ height: "1px", backgroundColor: "rgba(255,255,255,0.06)" }} />
+      {/* Banner 2 */}
+      <div className="relative w-full my-4 overflow-hidden" style={{ height: "180px" }}>
+        <Image
+          src="/images/services-consulting.jpg"
+          alt="Security consulting"
+          fill
+          className="object-cover"
+          style={{ opacity: 0.25 }}
+        />
+        <div className="absolute inset-0" style={{
+          background: "linear-gradient(to right, #080b14 0%, transparent 30%, transparent 70%, #080b14 100%)"
+        }} />
+        <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
+          <p className="text-lg font-semibold" style={{ color: "#94a3b8" }}>
+            &ldquo;Security isn&apos;t a feature. It&apos;s the foundation.&rdquo;
+          </p>
+        </div>
       </div>
 
       {/* ── SERVICE 3: SECURITY BY DESIGN ── */}

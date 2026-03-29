@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const E8Icon = () => (
@@ -134,14 +135,23 @@ export default function ToolsPage() {
     <div className="animate-fade-in-up">
       {/* ── HERO ── */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8"
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
         style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), #080b14",
           borderBottom: "1px solid rgba(255,255,255,0.06)",
         }}
       >
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/tools-hero.jpg"
+            alt="Security tools"
+            fill
+            priority
+            className="object-cover"
+            style={{ opacity: 0.09 }}
+          />
+          <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div
             className="inline-flex items-center gap-2 text-xs font-mono px-3 py-1.5 rounded-full mb-6"
             style={{

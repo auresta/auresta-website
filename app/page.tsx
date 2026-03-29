@@ -304,10 +304,19 @@ export default function HomePage() {
 
       {/* ── WHY AURESTA ── */}
       <section
-        className="py-20 px-4 sm:px-6 lg:px-8"
-        style={{ backgroundColor: "#0e1421" }}
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/home-why.jpg"
+            alt="Security operations"
+            fill
+            className="object-cover"
+            style={{ opacity: 0.06 }}
+          />
+          <div className="absolute inset-0" style={{ backgroundColor: "rgba(14,20,33,0.96)" }} />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
               Why Auresta
