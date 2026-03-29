@@ -20,7 +20,7 @@ export default function ServicesPage() {
             fill
             priority
             className="object-cover"
-            style={{ opacity: 0.22 }}
+            style={{ opacity: 0.35 }}
           />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), rgba(8,11,20,0.85)" }} />
         </div>
@@ -40,10 +40,10 @@ export default function ServicesPage() {
           <div className="mb-10">
             <div className="flex items-center gap-3 mb-4">
               <div
-                className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
-                style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)" }}
+                className="w-10 h-10 rounded-lg flex items-center justify-center"
+                style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)", color: "#06b6d4" }}
               >
-                🔍
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
               </div>
               <div>
                 <p className="text-xs font-mono uppercase tracking-widest" style={{ color: "#06b6d4" }}>
@@ -80,19 +80,19 @@ export default function ServicesPage() {
               </div>
               <ul className="space-y-2 text-sm text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Essential Eight scorecard
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Gap analysis with remediation priorities
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Board-ready executive summary
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Cyber insurance readiness statement
                 </li>
               </ul>
@@ -108,7 +108,7 @@ export default function ServicesPage() {
                 backgroundColor: "#141c2e",
                 border: "1px solid rgba(6,182,212,0.3)",
                 borderTop: "3px solid #06b6d4",
-                boxShadow: "0 0 32px rgba(6,182,212,0.1), 0 4px 24px rgba(0,0,0,0.4)",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
               }}
             >
               <div
@@ -126,23 +126,23 @@ export default function ServicesPage() {
               </div>
               <ul className="space-y-2 text-sm text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Everything in Tier 1
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   AI-driven attack path analysis
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Correlated multi-tool vulnerability results
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Business-impact severity ratings
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#06b6d4" }}>✓</span>
+                  <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Remediation roadmap with cost estimates
                 </li>
               </ul>
@@ -170,23 +170,23 @@ export default function ServicesPage() {
               </div>
               <ul className="space-y-2 text-sm text-text-secondary">
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#3b82f6" }}>✓</span>
+                  <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Monthly security posture reports
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#3b82f6" }}>✓</span>
+                  <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Continuous monitoring alerts
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#3b82f6" }}>✓</span>
+                  <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Quarterly Essential Eight re-assessment
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#3b82f6" }}>✓</span>
+                  <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Annual insurance evidence package
                 </li>
                 <li className="flex items-start gap-2">
-                  <span style={{ color: "#3b82f6" }}>✓</span>
+                  <span style={{ color: "#3b82f6", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
                   Priority incident response support
                 </li>
               </ul>
@@ -205,7 +205,7 @@ export default function ServicesPage() {
           alt="Network security"
           fill
           className="object-cover"
-          style={{ opacity: 0.3 }}
+          style={{ opacity: 0.40 }}
         />
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to right, #080b14 0%, transparent 30%, transparent 70%, #080b14 100%)"
@@ -224,10 +224,10 @@ export default function ServicesPage() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
-                  style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)" }}
+                  className="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)", color: "#06b6d4" }}
                 >
-                  🤖
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
                 </div>
                 <div>
                   <p className="text-xs font-mono uppercase tracking-widest" style={{ color: "#06b6d4" }}>
@@ -277,7 +277,8 @@ export default function ServicesPage() {
                 }}
               >
                 <p className="text-sm font-mono" style={{ color: "#06b6d4" }}>
-                  💡 DARPA research found AI agents discovered real zero-days at{" "}
+                  <span className="inline-flex items-center gap-1"><svg className="w-4 h-4 inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0018 8 6 6 0 006 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 018.91 14"/></svg></span>{" "}
+                  DARPA research found AI agents discovered real zero-days at{" "}
                   <strong>$152 per finding</strong> — vs $15,000–$50,000 for traditional penetration testing.
                 </p>
               </div>
@@ -365,7 +366,7 @@ export default function ServicesPage() {
           alt="Security consulting"
           fill
           className="object-cover"
-          style={{ opacity: 0.25 }}
+          style={{ opacity: 0.40 }}
         />
         <div className="absolute inset-0" style={{
           background: "linear-gradient(to right, #080b14 0%, transparent 30%, transparent 70%, #080b14 100%)"
@@ -382,10 +383,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
-              style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)" }}
+              className="w-10 h-10 rounded-lg flex items-center justify-center"
+              style={{ backgroundColor: "rgba(6,182,212,0.15)", border: "1px solid rgba(6,182,212,0.3)", color: "#06b6d4" }}
             >
-              🛡️
+              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div>
               <p className="text-xs font-mono uppercase tracking-widest" style={{ color: "#06b6d4" }}>
@@ -465,7 +466,7 @@ export default function ServicesPage() {
                 <ul className="space-y-2">
                   {item.items.map((i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
-                      <span style={{ color: "#06b6d4", flexShrink: 0 }}>✓</span> {i}
+                      <span style={{ color: "#06b6d4", flexShrink: 0, display: "inline-flex", alignItems: "center" }}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg></span> {i}
                     </li>
                   ))}
                 </ul>

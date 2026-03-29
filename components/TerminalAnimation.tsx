@@ -58,11 +58,11 @@ export default function TerminalAnimation() {
 
   return (
     <div
-      className="rounded-lg overflow-hidden shadow-cyan-glow"
+      className="rounded-lg overflow-hidden"
       style={{
         backgroundColor: "#0a0f1a",
         border: "1px solid rgba(6, 182, 212, 0.35)",
-        boxShadow: "0 0 32px rgba(6, 182, 212, 0.12)",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
       }}
     >
       {/* Window chrome */}

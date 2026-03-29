@@ -138,7 +138,7 @@ export default function AboutPage() {
                 style={{
                   backgroundColor: "#111827",
                   border: "1px solid rgba(6,182,212,0.2)",
-                  boxShadow: "0 0 24px rgba(6,182,212,0.08)",
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
                 }}
               >
                 <div
@@ -185,10 +185,10 @@ export default function AboutPage() {
                 }}
               >
                 <span
-                  className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs"
+                  className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
                   style={{ backgroundColor: "rgba(6,182,212,0.2)", color: "#06b6d4" }}
                 >
-                  ✓
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
                 </span>
                 <p className="text-sm text-text-secondary leading-relaxed">{cap}</p>
               </div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
                       ? "rgba(59,130,246,0.2)"
                       : "rgba(255,255,255,0.06)"
                   }`,
-                  boxShadow: cert.status === "complete" ? "0 0 16px rgba(6,182,212,0.08)" : "none",
+                  boxShadow: cert.status === "complete" ? "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)" : "none",
                 }}
               >
                 <div className="flex items-center justify-between mb-3">

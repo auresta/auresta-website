@@ -4,10 +4,38 @@ import { useState } from "react";
 import Image from "next/image";
 
 const trustBadges = [
-  { icon: "🏅", label: "AIGP Certified" },
-  { icon: "🇦🇺", label: "Australian Owned" },
-  { icon: "🔐", label: "Essential Eight Specialists" },
-  { icon: "🖥️", label: "Sovereign Compute" },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="8" r="4"/><path d="M8 14h8l1 7H7l1-7z"/><polyline points="9 11 12 14 15 11"/>
+      </svg>
+    ),
+    label: "AIGP Certified",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+      </svg>
+    ),
+    label: "Australian Owned",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
+    label: "Essential Eight Specialists",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
+    label: "Sovereign Compute",
+  },
 ];
 
 type FormState = {
@@ -76,7 +104,7 @@ export default function ContactPage() {
             alt="Office"
             fill
             className="object-cover"
-            style={{ opacity: 0.22 }}
+            style={{ opacity: 0.35 }}
           />
           <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.92)" }} />
         </div>
@@ -103,10 +131,14 @@ export default function ContactPage() {
                   style={{
                     backgroundColor: "#111827",
                     border: "1px solid rgba(6,182,212,0.3)",
-                    boxShadow: "0 0 40px rgba(6,182,212,0.12)",
+                    boxShadow: "0 4px 24px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3)",
                   }}
                 >
-                  <div className="text-6xl mb-6">✅</div>
+                  <div className="flex justify-center mb-6">
+                    <span className="flex items-center justify-center w-16 h-16 rounded-full" style={{ backgroundColor: "rgba(6,182,212,0.15)", color: "#06b6d4" }}>
+                      <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                  </div>
                   <h2 className="text-2xl font-bold text-text-primary mb-3">
                     Booking Received
                   </h2>
@@ -300,7 +332,9 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <span className="text-lg">📍</span>
+                    <span className="flex-shrink-0 w-5 h-5 mt-0.5" style={{ color: "#06b6d4" }}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
                     <div>
                       <p className="text-xs text-text-muted mb-1">Location</p>
                       <p className="text-sm text-text-secondary">Melbourne, Australia</p>
@@ -357,7 +391,7 @@ export default function ContactPage() {
                       border: "1px solid rgba(255,255,255,0.07)",
                     }}
                   >
-                    <div className="text-2xl mb-1">{badge.icon}</div>
+                    <div className="flex justify-center mb-1" style={{ color: "#06b6d4" }}>{badge.icon}</div>
                     <p className="text-xs text-text-muted leading-tight">{badge.label}</p>
                   </div>
                 ))}

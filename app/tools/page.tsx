@@ -147,7 +147,7 @@ export default function ToolsPage() {
             fill
             priority
             className="object-cover"
-            style={{ opacity: 0.20 }}
+            style={{ opacity: 0.35 }}
           />
           <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
         </div>
