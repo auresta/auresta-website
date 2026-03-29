@@ -1,0 +1,289 @@
+import Link from "next/link";
+
+const capabilities = [
+  "Deep AI/ML systems integration (LLM infrastructure, agentic frameworks, sovereign compute)",
+  "AIGP (AI Governance Professional) certified",
+  "Essential Eight implementation experience",
+  "Privacy Act / DPA compliance analysis",
+  "SOCI Act and APRA CPS 234 familiarity",
+  "Penetration testing — wireless, network, application, AI-systems",
+  "Sovereign compute: RTX Pro 6000 Blackwell (96GB VRAM) for on-premises inference",
+];
+
+const certifications = [
+  {
+    status: "complete",
+    name: "AIGP — AI Governance Professional",
+    note: "Current",
+    progress: 100,
+  },
+  {
+    status: "in-progress",
+    name: "CyberCert SMB1001 Partner",
+    note: "In Progress",
+    progress: 55,
+  },
+  {
+    status: "planned",
+    name: "CompTIA Security+",
+    note: "Planned",
+    progress: 0,
+  },
+  {
+    status: "planned",
+    name: "OSCP — Offensive Security Certified Professional",
+    note: "Planned",
+    progress: 0,
+  },
+  {
+    status: "planned",
+    name: "ISO 27001 Lead Implementer",
+    note: "Planned",
+    progress: 0,
+  },
+  {
+    status: "planned",
+    name: "CREST",
+    note: "Planned",
+    progress: 0,
+  },
+];
+
+const industries = ["Healthcare", "Construction", "Agriculture", "Hospitality", "Legal"];
+
+export default function AboutPage() {
+  return (
+    <div className="animate-fade-in-up">
+      {/* Header */}
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(6,182,212,0.08) 0%, transparent 70%), #080b14",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl font-black text-text-primary mb-6">
+            Built by AI Engineers Who{" "}
+            <span style={{ color: "#06b6d4" }}>Think Like Attackers</span>
+          </h1>
+          <p className="text-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">
+            Auresta AI was founded at the intersection of two urgent trends: the accelerating sophistication of
+            AI-powered threats, and the widening gap between enterprise-grade security capabilities and what
+            Australian SMEs can actually afford.
+          </p>
+        </div>
+      </section>
+
+      {/* ── OUR STORY ── */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+            <div className="lg:col-span-3">
+              <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-6">Our Story</h2>
+              <div className="space-y-5 text-text-secondary leading-relaxed">
+                <p>
+                  We&apos;ve built AI-powered systems across healthcare, construction, and agriculture — products that
+                  handle real patient data, critical infrastructure designs, and sensitive financial records.
+                  That builder&apos;s perspective gives us a different view of your attack surface.
+                </p>
+                <p>
+                  Most security firms evaluate risk from the outside. We&apos;ve been on the inside — architecting the
+                  systems, deploying the models, managing the data pipelines. We know where AI systems break, where
+                  data leaks, and where attackers look first.
+                </p>
+                <p>
+                  Auresta exists to make enterprise-grade security accessible to the Australian SMEs who need it
+                  most — without the enterprise price tag or the 6-month engagement timeline.
+                </p>
+              </div>
+            </div>
+
+            <div className="lg:col-span-2">
+              <div
+                className="rounded-lg p-7"
+                style={{
+                  backgroundColor: "#111827",
+                  border: "1px solid rgba(6,182,212,0.2)",
+                  boxShadow: "0 0 24px rgba(6,182,212,0.08)",
+                }}
+              >
+                <div
+                  className="text-xs font-mono uppercase tracking-widest mb-4"
+                  style={{ color: "rgba(6,182,212,0.6)" }}
+                >
+                  Sovereign Compute
+                </div>
+                <div className="text-4xl mb-3">🖥️</div>
+                <h3 className="font-bold text-text-primary mb-2">RTX Pro 6000 Blackwell</h3>
+                <p className="text-sm text-text-secondary leading-relaxed">
+                  96GB VRAM. On-premises AI inference. Your vulnerability data, scan results, and security
+                  reports never leave Australian soil. Not in transit. Not in storage.
+                </p>
+                <div
+                  className="mt-4 pt-4 border-t text-xs font-mono"
+                  style={{ borderColor: "rgba(255,255,255,0.06)", color: "rgba(6,182,212,0.5)" }}
+                >
+                  📍 Melbourne, Australia
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CAPABILITIES ── */}
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        style={{ backgroundColor: "#0e1421" }}
+      >
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-10">
+            What We Bring
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {capabilities.map((cap) => (
+              <div
+                key={cap}
+                className="flex items-start gap-3 p-4 rounded-lg"
+                style={{
+                  backgroundColor: "#141c2e",
+                  border: "1px solid rgba(255,255,255,0.07)",
+                }}
+              >
+                <span
+                  className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs"
+                  style={{ backgroundColor: "rgba(6,182,212,0.2)", color: "#06b6d4" }}
+                >
+                  ✓
+                </span>
+                <p className="text-sm text-text-secondary leading-relaxed">{cap}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CERTIFICATIONS ROADMAP ── */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-text-primary mb-3">
+            Certifications Roadmap
+          </h2>
+          <p className="text-text-secondary mb-10">
+            We hold ourselves to the same standards we advise clients on.
+          </p>
+
+          <div className="space-y-5">
+            {certifications.map((cert) => (
+              <div
+                key={cert.name}
+                className="p-5 rounded-lg"
+                style={{
+                  backgroundColor: "#111827",
+                  border: `1px solid ${
+                    cert.status === "complete"
+                      ? "rgba(6,182,212,0.3)"
+                      : cert.status === "in-progress"
+                      ? "rgba(59,130,246,0.2)"
+                      : "rgba(255,255,255,0.06)"
+                  }`,
+                  boxShadow: cert.status === "complete" ? "0 0 16px rgba(6,182,212,0.08)" : "none",
+                }}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">
+                      {cert.status === "complete" ? "✅" : cert.status === "in-progress" ? "🔄" : "⬜"}
+                    </span>
+                    <div>
+                      <p className="font-semibold text-text-primary text-sm">{cert.name}</p>
+                    </div>
+                  </div>
+                  <span
+                    className="text-xs px-2.5 py-1 rounded-full font-medium"
+                    style={{
+                      backgroundColor:
+                        cert.status === "complete"
+                          ? "rgba(6,182,212,0.15)"
+                          : cert.status === "in-progress"
+                          ? "rgba(59,130,246,0.12)"
+                          : "rgba(255,255,255,0.05)",
+                      color:
+                        cert.status === "complete"
+                          ? "#06b6d4"
+                          : cert.status === "in-progress"
+                          ? "#3b82f6"
+                          : "#475569",
+                    }}
+                  >
+                    {cert.note}
+                  </span>
+                </div>
+
+                {/* Progress bar */}
+                <div
+                  className="h-1.5 rounded-full overflow-hidden"
+                  style={{ backgroundColor: "rgba(255,255,255,0.06)" }}
+                >
+                  <div
+                    className="h-full rounded-full transition-all duration-500"
+                    style={{
+                      width: `${cert.progress}%`,
+                      backgroundColor:
+                        cert.status === "complete"
+                          ? "#06b6d4"
+                          : cert.status === "in-progress"
+                          ? "#3b82f6"
+                          : "transparent",
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDUSTRIES ── */}
+      <section
+        className="py-16 px-4 sm:px-6 lg:px-8"
+        style={{
+          backgroundColor: "#0e1421",
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-xl font-bold text-text-primary mb-6">
+            Industries We&apos;ve Built For
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {industries.map((ind) => (
+              <span
+                key={ind}
+                className="px-5 py-2 rounded-full text-sm font-medium"
+                style={{
+                  backgroundColor: "#141c2e",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  color: "#94a3b8",
+                }}
+              >
+                {ind}
+              </span>
+            ))}
+          </div>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-md font-bold transition-all hover:opacity-90"
+            style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
+          >
+            Book a Free Assessment
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+}
