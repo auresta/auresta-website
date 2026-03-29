@@ -191,7 +191,7 @@ export default function ServicesPage() {
       {/* ── IMAGE DIVIDER BANNER ── */}
       <div className="relative w-full my-4 overflow-hidden" style={{ height: "200px" }}>
         <Image
-          src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&q=85&auto=format&fit=crop"
+          src="/images/network-nodes.jpg"
           alt="Network security"
           fill
           className="object-cover"

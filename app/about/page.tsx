@@ -104,7 +104,7 @@ export default function AboutPage() {
             {/* Image */}
             <div className="relative rounded-xl overflow-hidden" style={{ height: "400px" }}>
               <Image
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=85&auto=format&fit=crop"
+                src="/images/about-team.jpg"
                 alt="Security engineering team"
                 fill
                 className="object-cover"

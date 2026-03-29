@@ -186,7 +186,7 @@ export default function HomePage() {
         {/* Atmospheric background image — very subtle texture */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=85&auto=format&fit=crop"
+            src="/images/hero-server-room.jpg"
             alt="Server infrastructure"
             fill
             priority
