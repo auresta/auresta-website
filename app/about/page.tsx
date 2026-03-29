@@ -31,7 +31,8 @@ const capabilities = [
   "Privacy Act / DPA compliance analysis",
   "Deep AI/ML systems integration (LLM infrastructure, agentic frameworks, sovereign compute)",
   "Penetration testing — wireless, network, application, AI-systems",
-  "Dedicated on-premises inference hardware for sovereign data processing",
+  "Sovereign compute infrastructure for on-premises AI inference",
+  "ISO 27001, ASD Essential Eight, and APRA CPS 234 compliance frameworks",
 ];
 
 const certifications = [
