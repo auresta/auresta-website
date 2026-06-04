@@ -39,7 +39,7 @@ export default function EarlyAccessForm() {
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fb923c" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <h3 className="text-xl font-bold text-text-primary mb-2">Request Received</h3>
-        <p className="text-text-secondary">We&apos;ll be in touch shortly about your early access application.</p>
+        <p className="text-text-secondary">We&apos;ll be in touch shortly to get you set up with Shannon.</p>
       </div>
     );
   }
@@ -107,9 +107,9 @@ export default function EarlyAccessForm() {
         className="w-full py-3.5 rounded-md font-bold text-sm transition-all hover:opacity-90 disabled:opacity-60"
         style={{ backgroundColor: "#fb923c", color: "#080b14" }}
       >
-        {loading ? "Submitting..." : "Apply for Early Access"}
+        {loading ? "Submitting..." : "Get Started"}
       </button>
-      <p className="text-center text-xs text-text-muted">We review all applications personally. Expect a response within 48 hours.</p>
+      <p className="text-center text-xs text-text-muted">We&apos;ll get back to you within 48 hours.</p>
     </form>
   );
 }

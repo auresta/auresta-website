@@ -116,13 +116,14 @@ function ToolCard({ tool }: { tool: typeof tools[0] }) {
           {tool.icon}
         </div>
         <span
-          className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0"
+          className="text-xs font-semibold px-2.5 py-1 rounded-full flex-shrink-0 inline-flex items-center gap-1.5"
           style={{
             backgroundColor: "rgba(6,182,212,0.15)",
             color: "#06b6d4",
           }}
         >
-          Coming Soon
+          <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#06b6d4" }} />
+          Active
         </span>
       </div>
 

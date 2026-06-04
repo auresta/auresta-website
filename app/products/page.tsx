@@ -19,9 +19,9 @@ const ArrowRight = () => (
 const products = [
   {
     image: "/images/shannon-ai.jpg",
-    badgeText: "In Development · Q2 2026",
-    badgeBg: "rgba(251,146,60,0.15)",
-    badgeColor: "#fb923c",
+    badgeText: "Active",
+    badgeBg: "rgba(16,185,129,0.15)",
+    badgeColor: "#10b981",
     name: "Shannon Engine",
     href: "/products/shannon",
     description:
@@ -44,7 +44,7 @@ const products = [
   },
   {
     image: "/images/siem-dashboard.jpg",
-    badgeText: "Phase 1 Active",
+    badgeText: "Active",
     badgeBg: "rgba(16,185,129,0.15)",
     badgeColor: "#10b981",
     name: "Auresta Security Platform",
@@ -69,9 +69,9 @@ const products = [
   },
   {
     image: "/images/threat-detection.jpg",
-    badgeText: "Coming Q2–Q3 2026",
-    badgeBg: "rgba(6,182,212,0.12)",
-    badgeColor: "#06b6d4",
+    badgeText: "Active",
+    badgeBg: "rgba(16,185,129,0.15)",
+    badgeColor: "#10b981",
     name: "AI Security Tools",
     href: "/tools",
     description:

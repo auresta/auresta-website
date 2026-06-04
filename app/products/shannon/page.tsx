@@ -128,12 +128,12 @@ export default function ShannonPage() {
           <div
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono mb-6"
             style={{
-              backgroundColor: "rgba(251,146,60,0.12)",
-              border: "1px solid rgba(251,146,60,0.3)",
-              color: "#fb923c",
+              backgroundColor: "rgba(16,185,129,0.12)",
+              border: "1px solid rgba(16,185,129,0.3)",
+              color: "#10b981",
             }}
           >
-            In Development · Launching Q2 2026
+            Active
           </div>
           <h1 className="text-4xl sm:text-6xl font-black text-text-primary mb-3">
             Shannon Engine
@@ -152,7 +152,7 @@ export default function ShannonPage() {
             className="inline-flex items-center gap-2 px-8 py-4 rounded-md font-bold transition-all hover:opacity-90"
             style={{ backgroundColor: "#fb923c", color: "#080b14" }}
           >
-            Request Early Access
+            Book a Demo
           </Link>
         </div>
       </section>
@@ -415,8 +415,8 @@ export default function ShannonPage() {
         </div>
         <div className="relative z-10 max-w-2xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-text-primary mb-3">Request Early Access</h2>
-            <p className="text-text-secondary">Shannon isn&apos;t publicly available yet. We&apos;re onboarding a small number of design partners for Q2 2026.</p>
+            <h2 className="text-3xl font-bold text-text-primary mb-3">Get Started with Shannon</h2>
+            <p className="text-text-secondary">Shannon is available now. Tell us about your environment and we&apos;ll get you set up.</p>
           </div>
           <EarlyAccessForm />
         </div>
