@@ -90,6 +90,7 @@ export default function Footer() {
               <Link href="/contact" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Contact</Link>
               <a href="https://calendly.com/team-auresta/30min" target="_blank" rel="noopener noreferrer" className="text-sm transition-colors" style={{ color: "#06b6d4" }}>Book Assessment →</a>
               <Link href="/privacy" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

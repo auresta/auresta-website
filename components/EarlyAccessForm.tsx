@@ -3,12 +3,33 @@ import { useState } from "react";
 
 export default function EarlyAccessForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
   const [form, setForm] = useState({ name: "", company: "", email: "", useCase: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Early access request:", form);
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/early-access", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, website: honeypot }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -54,12 +75,39 @@ export default function EarlyAccessForm() {
         <label className="block text-xs font-medium text-text-secondary mb-1.5">How would you use Shannon?</label>
         <textarea rows={3} style={{...inputStyle, resize: "none"}} value={form.useCase} onChange={e => setForm({...form, useCase: e.target.value})} placeholder="E.g. continuous external attack surface monitoring for our SaaS product..." />
       </div>
+      {/* Honeypot — hidden from real users; bots fill it. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+      />
+
+      {error && (
+        <p
+          role="alert"
+          className="text-sm rounded-md px-4 py-3"
+          style={{
+            backgroundColor: "rgba(239,68,68,0.1)",
+            border: "1px solid rgba(239,68,68,0.3)",
+            color: "#fca5a5",
+          }}
+        >
+          {error}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="w-full py-3.5 rounded-md font-bold text-sm transition-all hover:opacity-90"
+        disabled={loading}
+        className="w-full py-3.5 rounded-md font-bold text-sm transition-all hover:opacity-90 disabled:opacity-60"
         style={{ backgroundColor: "#fb923c", color: "#080b14" }}
       >
-        Apply for Early Access
+        {loading ? "Submitting..." : "Apply for Early Access"}
       </button>
       <p className="text-center text-xs text-text-muted">We review all applications personally. Expect a response within 48 hours.</p>
     </form>
