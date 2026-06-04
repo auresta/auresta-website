@@ -1,0 +1,8 @@
+# Auresta AI Pty Ltd — security contact (RFC 9116)
+# Canonical location is /.well-known/security.txt — this is a legacy convenience copy.
+
+Contact: mailto:team@auresta.com.au
+Contact: https://www.auresta.com.au/contact
+Expires: 2027-06-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.auresta.com.au/.well-known/security.txt

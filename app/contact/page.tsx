@@ -62,6 +62,8 @@ export default function ContactPage() {
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -69,14 +71,28 @@ export default function ContactPage() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    console.log("Assessment booking submitted:", form);
-    setTimeout(() => {
-      setLoading(false);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, website: honeypot }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong. Please try again.");
+      }
       setSubmitted(true);
-    }, 800);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -284,6 +300,38 @@ export default function ContactPage() {
                       style={{ ...inputStyle, ...inputFocusStyle, resize: "vertical" }}
                     />
                   </div>
+
+                  {/* Honeypot — hidden from real users; bots fill it. */}
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    style={{
+                      position: "absolute",
+                      left: "-9999px",
+                      width: "1px",
+                      height: "1px",
+                      opacity: 0,
+                    }}
+                  />
+
+                  {error && (
+                    <p
+                      role="alert"
+                      className="text-sm rounded-md px-4 py-3"
+                      style={{
+                        backgroundColor: "rgba(239,68,68,0.1)",
+                        border: "1px solid rgba(239,68,68,0.3)",
+                        color: "#fca5a5",
+                      }}
+                    >
+                      {error}
+                    </p>
+                  )}
 
                   <button
                     type="submit"
