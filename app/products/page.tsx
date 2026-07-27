@@ -23,7 +23,7 @@ const products = [
     badgeBg: "rgba(6,182,212,0.15)",
     badgeColor: "#06b6d4",
     name: "SecureForge IDP",
-    href: "/secureforge",
+    href: "/products/secureforge",
     description:
       "Enterprise internal developer platform — turns SOCI CIRMP, Essential Eight and the Cyber Security Act 2024 into continuously-enforced, developer-friendly guardrails. Any-cloud, sovereign, CNCF-native.",
     bullets: [
@@ -34,7 +34,7 @@ const products = [
       "Continuous compliance + 7-year audit trail",
     ],
     ctaLabel: "Explore SecureForge",
-    ctaHref: "/secureforge",
+    ctaHref: "/products/secureforge",
     ctaStyle: {
       backgroundColor: "rgba(6,182,212,0.12)",
       color: "#06b6d4",

@@ -76,6 +76,7 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-2.5">
               <Link href="/products" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Products</Link>
+              <Link href="/products/secureforge" className="text-sm text-text-muted hover:text-text-secondary transition-colors">SecureForge IDP</Link>
               <Link href="/products/shannon" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Shannon Engine</Link>
               <Link href="/services" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Services</Link>
               <Link href="/tools" className="text-sm text-text-muted hover:text-text-secondary transition-colors">Security Tools</Link>
