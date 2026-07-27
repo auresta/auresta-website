@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import TiltCard from "@/components/TiltCard";
 import DemoRequestForm from "@/components/DemoRequestForm";
+import LogoMarquee from "@/components/LogoMarquee";
 
 /* ── Icons (stroke 1.5, matching the site set) ── */
 const RouteIcon = () => (
@@ -70,7 +71,6 @@ const differentiators = [
 ];
 
 const complianceItems = ["SOCI Act CIRMP", "ACSC Essential Eight", "Cyber Security Act 2024", "Zero Trust", "AU data residency"];
-const stack = ["Kubernetes", "Backstage", "Crossplane", "OPA / Gatekeeper", "Kyverno", "Sigstore", "Istio", "Falco", "Trivy", "HashiCorp Vault", "ArgoCD"];
 
 /* ── Shared card chrome (matches the site's cards) ── */
 const cardBase: React.CSSProperties = { backgroundColor: "#0f1623", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "12px", height: "100%" };
@@ -270,23 +270,21 @@ export default function SecureForgeContent() {
         className="py-20 px-4 sm:px-6 lg:px-8 text-center"
         style={{ backgroundColor: "#0e1421", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}
       >
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center mb-10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/logos/cncf.svg"
+            alt="Cloud Native Computing Foundation"
+            style={{ height: "42px", width: "auto", margin: "0 auto 22px", opacity: 0.85, filter: "brightness(0) invert(1)" }}
+          />
           <div className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: "#06b6d4" }}>Open foundations</div>
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">Built on the proven CNCF-native stack</h2>
-          <p className="text-text-secondary text-lg mb-8">
+          <p className="text-text-secondary text-lg">
             No proprietary black box. SecureForge composes and hardens the open-source tools your platform teams already trust.
           </p>
-          <div className="flex flex-wrap justify-center gap-2.5">
-            {stack.map((s) => (
-              <span
-                key={s}
-                className="px-4 py-2 rounded-full text-sm font-medium font-mono"
-                style={{ backgroundColor: "#111827", border: "1px solid rgba(255,255,255,0.09)", color: "#cbd5e1" }}
-              >
-                {s}
-              </span>
-            ))}
-          </div>
+        </div>
+        <div className="max-w-6xl mx-auto">
+          <LogoMarquee />
         </div>
       </section>
 
