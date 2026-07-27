@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import TiltCard from "@/components/TiltCard";
-import EarlyAccessForm from "@/components/EarlyAccessForm";
+import DemoRequestForm from "@/components/DemoRequestForm";
 
 const CheckIcon = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -418,7 +418,7 @@ export default function ShannonPage() {
             <h2 className="text-3xl font-bold text-text-primary mb-3">Get Started with Shannon</h2>
             <p className="text-text-secondary">Shannon is available now. Tell us about your environment and we&apos;ll get you set up.</p>
           </div>
-          <EarlyAccessForm />
+          <DemoRequestForm />
         </div>
       </section>
     </div>

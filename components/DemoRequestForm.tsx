@@ -1,7 +1,29 @@
 "use client";
 import { useState } from "react";
 
-export default function EarlyAccessForm() {
+type DemoRequestFormProps = {
+  /** Product this request is for. Defaults to "Shannon" (preserves existing usage). */
+  product?: string;
+  /** Accent colour for the submit button + success icon. Defaults to Shannon orange. */
+  accent?: string;
+  /** Label for the free-text use-case field. Defaults to "How would you use {product}?". */
+  useCaseLabel?: string;
+  /** Placeholder for the use-case field. */
+  useCasePlaceholder?: string;
+  /** Success message shown after submit. */
+  successText?: string;
+  /** Submit button label. */
+  submitLabel?: string;
+};
+
+export default function DemoRequestForm({
+  product = "Shannon",
+  accent = "#fb923c",
+  useCaseLabel,
+  useCasePlaceholder = "E.g. continuous external attack surface monitoring for our SaaS product...",
+  successText,
+  submitLabel = "Get Started",
+}: DemoRequestFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -13,10 +35,10 @@ export default function EarlyAccessForm() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/early-access", {
+      const res = await fetch("/api/demo-request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, website: honeypot }),
+        body: JSON.stringify({ ...form, product, website: honeypot }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
@@ -35,11 +57,11 @@ export default function EarlyAccessForm() {
   if (submitted) {
     return (
       <div className="text-center py-12">
-        <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: "rgba(251,146,60,0.15)", border: "1px solid rgba(251,146,60,0.4)" }}>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fb923c" strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
+        <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: `${accent}26`, border: `1px solid ${accent}66` }}>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={accent} strokeWidth="2"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <h3 className="text-xl font-bold text-text-primary mb-2">Request Received</h3>
-        <p className="text-text-secondary">We&apos;ll be in touch shortly to get you set up with Shannon.</p>
+        <p className="text-text-secondary">{successText || `We'll be in touch shortly to get you set up with ${product}.`}</p>
       </div>
     );
   }
@@ -72,8 +94,8 @@ export default function EarlyAccessForm() {
         <input required type="email" style={inputStyle} value={form.email} onChange={e => setForm({...form, email: e.target.value})} placeholder="jane@company.com.au" />
       </div>
       <div>
-        <label className="block text-xs font-medium text-text-secondary mb-1.5">How would you use Shannon?</label>
-        <textarea rows={3} style={{...inputStyle, resize: "none"}} value={form.useCase} onChange={e => setForm({...form, useCase: e.target.value})} placeholder="E.g. continuous external attack surface monitoring for our SaaS product..." />
+        <label className="block text-xs font-medium text-text-secondary mb-1.5">{useCaseLabel || `How would you use ${product}?`}</label>
+        <textarea rows={3} style={{...inputStyle, resize: "none"}} value={form.useCase} onChange={e => setForm({...form, useCase: e.target.value})} placeholder={useCasePlaceholder} />
       </div>
       {/* Honeypot — hidden from real users; bots fill it. */}
       <input
@@ -105,9 +127,9 @@ export default function EarlyAccessForm() {
         type="submit"
         disabled={loading}
         className="w-full py-3.5 rounded-md font-bold text-sm transition-all hover:opacity-90 disabled:opacity-60"
-        style={{ backgroundColor: "#fb923c", color: "#080b14" }}
+        style={{ backgroundColor: accent, color: "#080b14" }}
       >
-        {loading ? "Submitting..." : "Get Started"}
+        {loading ? "Submitting..." : submitLabel}
       </button>
       <p className="text-center text-xs text-text-muted">We&apos;ll get back to you within 48 hours.</p>
     </form>

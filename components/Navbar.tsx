@@ -54,6 +54,12 @@ export default function Navbar() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-8">
             <Link
+              href="/secureforge"
+              className="text-sm text-text-secondary hover:text-text-primary transition-colors"
+            >
+              SecureForge
+            </Link>
+            <Link
               href="/products"
               className="text-sm text-text-secondary hover:text-text-primary transition-colors"
             >
@@ -135,6 +141,13 @@ export default function Navbar() {
             style={{ borderColor: "rgba(255,255,255,0.08)" }}
           >
             <div className="flex flex-col gap-4">
+              <Link
+                href="/secureforge"
+                className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"
+                onClick={() => setMenuOpen(false)}
+              >
+                SecureForge
+              </Link>
               <Link
                 href="/products"
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors px-2"

@@ -18,6 +18,31 @@ const ArrowRight = () => (
 
 const products = [
   {
+    image: "/images/data-center.jpg",
+    badgeText: "Enterprise",
+    badgeBg: "rgba(6,182,212,0.15)",
+    badgeColor: "#06b6d4",
+    name: "SecureForge IDP",
+    href: "/secureforge",
+    description:
+      "Enterprise internal developer platform — turns SOCI CIRMP, Essential Eight and the Cyber Security Act 2024 into continuously-enforced, developer-friendly guardrails. Any-cloud, sovereign, CNCF-native.",
+    bullets: [
+      "Golden-path templates — secure by default",
+      "Dual policy engine (OPA + Kyverno) at admission",
+      "Sigstore signing + SBOMs on every build",
+      "Crossplane Secure* infrastructure, any cloud",
+      "Continuous compliance + 7-year audit trail",
+    ],
+    ctaLabel: "Explore SecureForge",
+    ctaHref: "/secureforge",
+    ctaStyle: {
+      backgroundColor: "rgba(6,182,212,0.12)",
+      color: "#06b6d4",
+      border: "1px solid rgba(6,182,212,0.3)",
+    },
+    accentColor: "#06b6d4",
+  },
+  {
     image: "/images/shannon-ai.jpg",
     badgeText: "Active",
     badgeBg: "rgba(16,185,129,0.15)",
