@@ -5,16 +5,18 @@ import Footer from "@/components/Footer";
 import MouseTrail from "@/components/MouseTrail";
 
 export const metadata: Metadata = {
-  title: "Auresta AI — AI-Powered Cybersecurity for Australian Business",
+  title: "Auresta AI — Sovereign Security Software for Australian Enterprise",
   description:
-    "Enterprise-grade cybersecurity at SME price points. Essential Eight assessments, agentic threat simulation, and security-by-design consulting — powered by frontier AI models and sovereign Australian compute.",
+    "Auresta builds sovereign AI-security products: SecureForge IDP for continuously-enforced SOCI and Essential Eight compliance, and Shannon Engine for agentic threat simulation — running on Australian compute.",
   keywords: [
-    "cybersecurity",
+    "SecureForge",
+    "internal developer platform",
+    "Shannon Engine",
+    "security software",
     "Essential Eight",
+    "SOCI Act",
     "AI security",
-    "Australian SME",
-    "penetration testing",
-    "security audit",
+    "sovereign Australian compute",
   ],
 };
 

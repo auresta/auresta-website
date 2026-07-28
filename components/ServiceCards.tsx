@@ -49,7 +49,7 @@ const services: { title: string; description: string; price: string; icon: React
     icon: <NetworkGraphIcon />,
   },
   {
-    title: "Security-by-Design Consulting",
+    title: "Security-by-Design Engineering",
     description:
       "Embedded security architecture for AI product teams. Threat modelling, prompt injection, model extraction, data leakage.",
     price: "From $250/hr",

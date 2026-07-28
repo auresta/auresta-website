@@ -52,11 +52,32 @@ const services = [
     icon: <NetworkGraphIcon />,
   },
   {
-    title: "Security-by-Design Consulting",
+    title: "Security-by-Design Engineering",
     description:
       "Embedded security architecture for AI product teams. Threat modelling, prompt injection, model extraction, data leakage.",
     price: "From $250/hr",
     icon: <ShieldCheckIcon />,
+  },
+];
+
+const products = [
+  {
+    name: "SecureForge IDP",
+    tagline: "Secure by default. Compliant by design.",
+    description:
+      "An internal developer platform that turns SOCI Act CIRMP, ACSC Essential Eight and Cyber Security Act 2024 obligations into continuously-enforced guardrails. Golden paths, policy-as-code and a signed supply chain — compliance evidence is generated, not gathered.",
+    status: "Onboarding design partners",
+    href: "/products/secureforge",
+    icon: <ShieldCheckIcon />,
+  },
+  {
+    name: "Shannon Engine",
+    tagline: "Prove your defences hold.",
+    description:
+      "An AI-driven red team that never stops. Autonomous agents rehearse full attack chains end to end — recon through exfiltration — so gaps surface on your schedule rather than an adversary's.",
+    status: "Available",
+    href: "/products/shannon",
+    icon: <NetworkGraphIcon />,
   },
 ];
 
@@ -147,6 +168,48 @@ function ServiceCardInline({ svc }: { svc: { title: string; description: string;
   );
 }
 
+function ProductCardInline({ product }: { product: { name: string; tagline: string; description: string; status: string; href: string; icon: React.ReactNode } }) {
+  const [shadow, setShadow] = useState(defaultShadow);
+  return (
+    <TiltCard>
+    <div
+      className="relative rounded-xl p-7 flex flex-col transition-all duration-300"
+      style={{
+        backgroundColor: "#0f1623",
+        border: "1px solid rgba(255,255,255,0.07)",
+        borderRadius: "12px",
+        boxShadow: shadow,
+        height: "100%",
+      }}
+      onMouseEnter={() => setShadow(hoverShadow)}
+      onMouseLeave={() => setShadow(defaultShadow)}
+    >
+      <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(6,182,212,0.4) 50%, transparent)", marginBottom: "24px", borderRadius: "1px" }} />
+      <div className="flex items-start justify-between gap-4 mb-4">
+        <div className="flex items-center justify-center w-12 h-12 rounded-lg flex-shrink-0" style={{ backgroundColor: "rgba(6,182,212,0.1)", color: "#06b6d4" }}>
+          {product.icon}
+        </div>
+        <span
+          className="text-xs font-mono px-2.5 py-1 rounded-full whitespace-nowrap"
+          style={{ backgroundColor: "rgba(6,182,212,0.1)", border: "1px solid rgba(6,182,212,0.3)", color: "#06b6d4" }}
+        >
+          {product.status}
+        </span>
+      </div>
+      <h3 className="text-xl font-bold text-text-primary mb-1.5">{product.name}</h3>
+      <p className="text-sm font-medium mb-3" style={{ color: "#06b6d4" }}>{product.tagline}</p>
+      <p className="text-sm text-text-secondary mb-5 leading-relaxed flex-1">{product.description}</p>
+      <Link href={product.href} className="inline-flex items-center gap-1 text-sm font-semibold transition-colors" style={{ color: "rgba(6,182,212,0.7)" }}
+        onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "#06b6d4"; }}
+        onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.color = "rgba(6,182,212,0.7)"; }}
+      >
+        Explore {product.name} →
+      </Link>
+    </div>
+    </TiltCard>
+  );
+}
+
 function WhyCard({ item }: { item: { icon: React.ReactNode; title: string; desc: string } }) {
   const [shadow, setShadow] = useState(defaultShadow);
   return (
@@ -217,37 +280,39 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight text-text-primary mb-6">
-                <span className="shimmer-text">AI-Powered</span>{" "}
-                <span style={{ color: "#06b6d4" }}>Cybersecurity</span>
+                <span className="shimmer-text">Sovereign</span>{" "}
+                <span style={{ color: "#06b6d4" }}>Security Software</span>
                 <br />
-                for Australian Business
+                for Australian Enterprise
               </h1>
 
               <p className="text-lg text-text-secondary mb-8 max-w-xl leading-relaxed">
-                Enterprise-grade protection at SME price points — powered by
-                frontier AI models and sovereign Australian compute.
+                We build the platforms that make security continuous —
+                SecureForge for SOCI and Essential Eight guardrails, Shannon
+                Engine for agentic threat simulation. Australian-owned, running
+                on sovereign compute.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/products"
+                  className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:opacity-90"
+                  style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
+                >
+                  Explore our products →
+                </Link>
                 <a
                   href="https://calendly.com/team-auresta/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:opacity-90"
-                  style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
-                >
-                  Book a Free Assessment
-                </a>
-                <Link
-                  href="/services"
                   className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:bg-white/5"
                   style={{
                     border: "1px solid rgba(6,182,212,0.4)",
                     color: "#06b6d4",
                   }}
                 >
-                  View Services →
-                </Link>
+                  Book a 30-minute call
+                </a>
               </div>
             </div>
 
@@ -272,16 +337,62 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SERVICES OVERVIEW ── */}
+      {/* ── PRODUCTS ── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
+            <div className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: "#06b6d4" }}>
+              Our products
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-              What We Do
+              Security platforms we build and own
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Auresta is a product company. We build sovereign security software
+              for regulated Australian organisations — engineered in-house, run
+              on Australian compute.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {products.map((product) => (
+              <ProductCardInline key={product.name} product={product} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/products"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md font-semibold text-sm transition-all hover:bg-white/5"
+              style={{ border: "1px solid rgba(6,182,212,0.4)", color: "#06b6d4" }}
+            >
+              See the full product range →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SERVICES OVERVIEW ── */}
+      <section
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        style={{
+          backgroundColor: "#0a0f1a",
+          borderTop: "1px solid rgba(255,255,255,0.06)",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+        }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: "#06b6d4" }}>
+              Engineering services
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
+              Get the platforms working in your estate
             </h2>
             <p className="text-text-secondary max-w-xl mx-auto">
-              Three integrated offerings designed to protect, test, and advise —
-              from first audit to embedded security.
+              Focused engagements that take teams from first assessment to
+              embedded security — built on the same engineering that goes into
+              our products.
             </p>
           </div>
 
