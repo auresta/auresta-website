@@ -1,7 +1,18 @@
 # LinkedIn Company Page — setup sheet
 
-**As at 2026-07-28.** Everything needed to create `linkedin.com/company/auresta` in one sitting.
-Assets are generated and committed alongside this file. `<FILL>` items are business facts I don't hold.
+**As at 2026-07-28. The page now EXISTS** — created at
+**<https://www.linkedin.com/company/136714108>**. That numeric ID is LinkedIn's placeholder; the
+public URL has not been claimed yet. Everything below is the content to fill it with. Assets are
+generated and committed alongside this file.
+
+> ### ⚠️ Do this first: claim the public URL
+>
+> **Edit page → Page info → LinkedIn public URL → `auresta-ai`**
+>
+> The site footer links to `linkedin.com/company/auresta-ai`. Until you set it, that link is dead and
+> the page is only reachable by its numeric ID. `auresta` is taken (an eyewear company) and
+> `auresta_ai` is invalid (underscores are rejected). Fallback: `auresta-au` — tell me if you use it
+> and I'll repoint the footer.
 
 > **Why now:** the footer on the live site already links to LinkedIn and X, and **both currently 404**.
 > A dead social link is worse than no link — Microsoft for Startups reviewers, accelerators and
@@ -36,7 +47,9 @@ before the "Create a Company Page" option will work:
 | **Industry** | **Computer and Network Security** (closest fit). If your list shows the newer taxonomy, use *Computer and Network Security*; second choice *Software Development*. **Do not** pick a consulting or professional-services category — same exclusion logic as the Microsoft application |
 | **Company size** | **2–10 employees** |
 | **Company type** | **Privately Held** |
-| **Founded** | `<FILL — year>` (the only field I couldn't source from the repo) |
+| **Founded** | **2025** — ABN 72 690 869 820 became active 10 Sep 2025 (ABN Lookup) |
+| **Phone** | `+61 3 9998 0428` (from the site footer) |
+| **Hashtags** (max 3) | `#cybersecurity` · `#platformengineering` · `#devsecops` |
 | **Location** | `Level 12, 350 Collins Street, Melbourne VIC 3000, Australia` — taken from the footer, so it already matches what's published |
 | **Tagline** | See §3 |
 | **Logo** | `assets/linkedin-logo-300x300.png` (generated) |
@@ -44,7 +57,9 @@ before the "Create a Company Page" option will work:
 
 ### Legal-name note
 
-Your registered entity is **Auresta Pty Ltd, ABN 72 690 869 820** (published in the site footer).
+Confirmed against ABN Lookup: **AURESTA PTY LTD**, an Australian Private Company, **ABN 72 690 869 820**
+/ **ACN 690 869 820**, active from **10 Sep 2025**, VIC 3000, no registered trading names.
+
 LinkedIn wants the name people search for, so **Auresta** is right for the page name — but the full
 legal name goes in the About section (§4) so the page still matches your Microsoft application, ASIC
 record and any procurement due diligence.
@@ -72,7 +87,7 @@ Paste as-is:
 >
 > What makes us different: Australian data sovereignty is designed in, not bolted on — sensitive data stays onshore, and the architecture is hybrid because of it. We govern cloud-native workloads and containerised 5G network functions alike. And we are CNCF-native rather than a proprietary black box, composing and hardening the open-source tools platform teams already trust.
 >
-> Auresta is Australian-owned and independent. Auresta Pty Ltd, ABN 72 690 869 820, Melbourne.
+> Auresta is Australian-owned and independent. Auresta Pty Ltd, ACN 690 869 820, Melbourne.
 >
 > We are onboarding a small number of design partners across regulated Australian industries. auresta.com.au
 
@@ -106,6 +121,7 @@ Australian Critical Infrastructure
 
 ## 6. After the page exists — the bit people skip
 
+0. **Claim the public URL** — `auresta-ai`. See the banner at the top; the site footer depends on it.
 1. **Add Auresta as your current position** on your personal profile, pointing at the new page. Until you
    do, the logo doesn't appear on your profile and the page looks abandoned. This single step does more
    for credibility than anything else here.
