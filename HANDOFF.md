@@ -71,11 +71,22 @@ right Calendly. Contact/demo emails elsewhere use `team@auresta.com.au`.
    pattern site-wide for SEO.
 
 **Go-to-market (from the "crossroads" strategy conversation):**
-- **Cloud credits (no VC needed):** *Microsoft for Startups Founders Hub* is the best fit ($5k instant →
-  up to $150k, Azure-primary, matches ADR-013). AWS Activate Founders ($1k), Google Start ($2k).
-  **Prereqs:** incorporate (Pty Ltd), corporate-domain email, a live one-pager (now satisfied by
-  `/products/secureforge`), complete LinkedIn. **I offered to DRAFT the Founders Hub application** (ready
-  to write — I have the product pitch + Azure-usage narrative from this session).
+- **Cloud credits (no VC needed):** ⚠️ **Corrected 2026-07-28 — the earlier note below was wrong.**
+  *Founders Hub no longer exists* as a separate program with a written application; Microsoft folded it
+  into a single **Microsoft for Startups** entry point. On the self-serve path **there is no application
+  form and no essay** — you go straight to Azure signup for **$1,000 (90 days) → +$4,000 (180 days)**
+  after business verification. **$5,000 is the self-serve ceiling.** The **~$100k–$150k tier and all the
+  ancillary benefits require a 10-character Investor Network referral code** from an accelerator /
+  incubator / angel network / university (no equity, no investment needed) — **Stone & Chalk is the
+  primary AU target**. Microsoft does not publish its network membership, so you must ask directly.
+  Two working docs now cover this end-to-end:
+  **`docs/gtm/2026-07-28-microsoft-for-startups-readiness.md`** (eligibility, field-by-field values,
+  credit/cost mechanics, traps) and **`docs/gtm/2026-07-28-accelerator-referral-pitch.md`** (who to ask,
+  a short email, and the full written pitch — §3 doubles as the design-partner one-pager source).
+  Also AWS Activate Founders ($1k), Google Start ($2k).
+  **Eligibility gotchas found:** signup needs a **fresh personal Microsoft account with no prior Azure
+  account** (work/company-domain addresses are rejected outright), and the program **excludes
+  "consultancy or agency"** — which is why the site was repositioned product-first (see below).
 - **AU levers:** **R&D Tax Incentive** (~43.5% refundable — the single biggest lever for a bootstrapped
   builder; incorporate + register with AusIndustry; confirm with an R&D-tax adviser). **Stone & Chalk**
   (absorbed AustCyber — the AU cyber accelerator/community, unlocks bigger credit tiers + design-partner
@@ -90,9 +101,20 @@ right Calendly. Contact/demo emails elsewhere use `team@auresta.com.au`.
 - **The strategic decision** (wrap PoC as blueprint / extend the kit / spin up the production program) is
   captured in `~/Projects/secureforge/delivery/Roadmap-Beyond-the-Kit.md`.
 
-**Suggested next action:** ask the user which to tackle — most likely **the Founders Hub application draft**
-(fast, unlocks free credits) and/or **the design-partner one-pager** (the revenue path), plus any of the
-three website polish items.
+**Done 2026-07-28:** the Microsoft for Startups work (both `docs/gtm/` docs above) and the **product-first
+repositioning** of the homepage + site metadata, which exists on branch
+**`gtm/product-first-positioning`** (commit `d7b96be`) **awaiting operator review — not yet merged to
+main.** It rewrites the site-wide title/description, reframes the hero, adds a Products section above
+services, and renames "Security-by-Design Consulting" → "…Engineering". `next build` passes (18 pages,
+`/` static) and the homepage now contains zero occurrences of "consult". **Do not apply to Microsoft
+until that branch is merged and live.**
+
+**Suggested next action:** merge or revise `gtm/product-first-positioning`; then **the design-partner
+one-pager** (the revenue path — source material is §3 of the referral-pitch doc), the **Stone & Chalk
+outreach email**, plus any of the three website polish items. Two smaller positioning items were left
+deliberately untouched as commercial decisions: the **"From $250/hr"** price on the homepage services
+card, and the bottom CTA banner (**"Book a Free 30-Minute Security Assessment"**) — both still read
+services-first if you want to go further.
 
 ## 4. How to work (mechanics that matter)
 
