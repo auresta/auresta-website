@@ -101,15 +101,15 @@ right Calendly. Contact/demo emails elsewhere use `team@auresta.com.au`.
 - **The strategic decision** (wrap PoC as blueprint / extend the kit / spin up the production program) is
   captured in `~/Projects/secureforge/delivery/Roadmap-Beyond-the-Kit.md`.
 
-**Done 2026-07-28:** the Microsoft for Startups work (both `docs/gtm/` docs above) and the **product-first
-repositioning** of the homepage + site metadata, which exists on branch
-**`gtm/product-first-positioning`** (commit `d7b96be`) **awaiting operator review — not yet merged to
-main.** It rewrites the site-wide title/description, reframes the hero, adds a Products section above
-services, and renames "Security-by-Design Consulting" → "…Engineering". `next build` passes (18 pages,
-`/` static) and the homepage now contains zero occurrences of "consult". **Do not apply to Microsoft
-until that branch is merged and live.**
+**Done 2026-07-28 — MERGED AND LIVE ON MAIN:** the Microsoft for Startups work (both `docs/gtm/` docs
+above) and the **product-first repositioning** of the homepage + site metadata. Merged fast-forward from
+`gtm/product-first-positioning`; on main as `789c201` → `8d44023` → `a3bfed4`. It rewrites the site-wide
+title/description, reframes the hero, adds a Products section above services, and renames
+"Security-by-Design Consulting" → "…Engineering". `next build` passes (18 pages, `/` static). **The
+consultancy-exclusion blocker is cleared — the Microsoft application can proceed** once the entity
+details and fresh MSA in the readiness sheet are sorted.
 
-The branch also completes the two remaining services-first signals, at the user's request:
+It also completes the two remaining services-first signals, at the user's request:
 **"From $250/hr"** → **"Scoped per engagement"** (an hourly rate is the strongest consultancy tell — the
 other two cards keep their fixed floors, `$3,500` / `$15,000`, which read as productised packages), and
 the bottom CTA banner **"Ready to know where you stand? / Book a Free 30-Minute Security Assessment"** →
@@ -120,9 +120,9 @@ The homepage now contains **zero** occurrences of *consult*, *"/hr"* or *"free �
 inline `services` array + `ServiceCardInline`. **Deleted 2026-07-28.** If a shared service-card component
 is ever wanted again, lift `ServiceCardInline` out of `app/page.tsx` rather than resurrecting the old one.
 
-**Suggested next action:** merge or revise `gtm/product-first-positioning`; then **the design-partner
-one-pager** (the revenue path — source material is §3 of the referral-pitch doc), the **Stone & Chalk
-outreach email**, plus any of the three website polish items.
+**Suggested next action:** **the design-partner one-pager** (the revenue path — source material is §3 of
+the referral-pitch doc) and the **Stone & Chalk outreach email** (§2 of the same doc, ready to send once
+`<NAME>`/`<ORG>` are filled). Then the Microsoft signup itself, and any of the three website polish items.
 
 ## 4. How to work (mechanics that matter)
 
