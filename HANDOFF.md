@@ -116,8 +116,9 @@ the bottom CTA banner **"Ready to know where you stand? / Book a Free 30-Minute 
 **"Ready to see it in your environment? / Book a 30-Minute Platform Walkthrough"**, same Calendly link.
 The homepage now contains **zero** occurrences of *consult*, *"/hr"* or *"free … assessment"*.
 
-**Note:** `components/ServiceCards.tsx` is **dead code** — nothing imports it; the homepage uses its own
-inline `services` array + `ServiceCardInline`. It was kept in sync anyway. Consider deleting it.
+**Note:** `components/ServiceCards.tsx` was **dead code** — nothing imported it; the homepage uses its own
+inline `services` array + `ServiceCardInline`. **Deleted 2026-07-28.** If a shared service-card component
+is ever wanted again, lift `ServiceCardInline` out of `app/page.tsx` rather than resurrecting the old one.
 
 **Suggested next action:** merge or revise `gtm/product-first-positioning`; then **the design-partner
 one-pager** (the revenue path — source material is §3 of the referral-pitch doc), the **Stone & Chalk
