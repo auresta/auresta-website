@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+/* Inter + JetBrains Mono are loaded by next/font/google in app/layout.tsx,
+   which self-hosts them at build time and exposes --font-inter /
+   --font-jetbrains-mono. Do not re-add an @import here: it costs a
+   render-blocking round trip and reintroduces a runtime dependency on
+   fonts.gstatic.com that the CSP no longer allows. */
 
 @tailwind base;
 @tailwind components;
@@ -30,13 +34,13 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: var(--font-jetbrains-mono), monospace;
 }
 
 @layer utilities {

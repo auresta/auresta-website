@@ -7,8 +7,11 @@ const isDev = process.env.NODE_ENV !== "production";
 //    scripts and by Cloudflare's same-origin email-decode snippet.
 //  - 'unsafe-inline' (style) is required by the site's inline `style={{…}}` usage.
 //  - 'unsafe-eval' is only needed by the dev HMR runtime, so it is scoped to dev.
-//  - fonts.googleapis.com / fonts.gstatic.com are required by the Google Fonts
-//    @import in app/globals.css (Inter + JetBrains Mono).
+//  - No Google Fonts origins. Inter + JetBrains Mono are loaded via
+//    next/font/google in app/layout.tsx, which downloads them at build time and
+//    serves them from /_next/static, so nothing is fetched from Google at
+//    runtime. Re-adding a webfont @import to globals.css would break under this
+//    policy — that is deliberate.
 const csp = [
   `default-src 'self'`,
   `base-uri 'self'`,
@@ -16,8 +19,8 @@ const csp = [
   `frame-ancestors 'none'`,
   `form-action 'self'`,
   `img-src 'self' data: blob:`,
-  `font-src 'self' data: https://fonts.gstatic.com`,
-  `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
+  `font-src 'self' data:`,
+  `style-src 'self' 'unsafe-inline'`,
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   `connect-src 'self'${isDev ? " ws:" : ""}`,
   `upgrade-insecure-requests`,

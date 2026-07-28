@@ -21,8 +21,8 @@ const config: Config = {
         "text-muted": "#475569",
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        inter: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
       boxShadow: {
         "cyan-glow": "0 0 20px rgba(6, 182, 212, 0.3)",

@@ -31,7 +31,7 @@ before the "Create a Company Page" option will work:
 | Field | Value |
 |---|---|
 | **Name** | `Auresta` |
-| **LinkedIn public URL** | `linkedin.com/company/auresta` — claim this exactly; the site footer now points here. Fallbacks if taken: `auresta-ai`, then `auresta-au` (tell me which and I'll update the footer) |
+| **LinkedIn public URL** | **`linkedin.com/company/auresta-ai`** — claim this exactly; the site footer points here. `auresta` was the first choice but is **already taken by an eyewear company**. Next fallback if `auresta-ai` is also gone: `auresta-au`. **Not `auresta_ai`** — see below |
 | **Website** | `https://auresta.com.au` |
 | **Industry** | **Computer and Network Security** (closest fit). If your list shows the newer taxonomy, use *Computer and Network Security*; second choice *Software Development*. **Do not** pick a consulting or professional-services category — same exclusion logic as the Microsoft application |
 | **Company size** | **2–10 employees** |
@@ -146,14 +146,22 @@ the repo's Geist font.
 
 ## 9. Open items
 
-- **⚠️ Sequencing** — the footer now points at `linkedin.com/company/auresta`, which **does not exist
+- **⚠️ Sequencing** — the footer points at `linkedin.com/company/auresta-ai`, which **does not exist
   until you create it**. Claim that exact URL, or tell me the fallback you took and I'll repoint the
   footer. Until then the icon is a dead link, same as before.
+- **URL character rules** — LinkedIn company URLs accept **lowercase letters, numbers and hyphens only**
+  (plus CJK). **Underscores are rejected**, so `auresta_ai` is not an option. No leading/trailing hyphen
+  and no double hyphen; disallowed characters get silently replaced with a hyphen. Handy consequence:
+  `auresta-ai` matches the `AURESTA`+superscript-`AI` lockup in the navbar and the "Auresta AI" page
+  titles, so it is arguably a better fit than the original `auresta` anyway.
 - **X / Twitter** — `@auresta_ai` does not exist (404). Footer link **removed**. Re-add when registered.
 - **Medium** — `medium.com/@auresta-ai` does not exist either (404). Footer link **removed**. This one
   wasn't on the radar; all three social links on the live site were dead.
 - **GitHub** — `github.com/auresta` **does** resolve, but the repos are private, so it was not linked.
   Worth linking once anything is public — it's the strongest credibility signal for a technical buyer.
-- **`Inter` is never actually loaded** — `app/globals.css` declares `font-family: 'Inter', sans-serif`
-  but no webfont ships and the `app/fonts/Geist*.woff` files are unreferenced, so visitors see a system
-  fallback. Unrelated to LinkedIn, but worth fixing for brand consistency.
+- ~~`Inter` is never actually loaded~~ — **this was wrong.** Inter *was* loading, via a Google Fonts
+  `@import` on line 1 of `app/globals.css` that the CSP explicitly allowed. **Fixed differently
+  2026-07-28:** both fonts moved to `next/font/google`, which self-hosts them at build time — removing a
+  render-blocking round trip, keeping visitor IPs off Google (which matters for a company selling
+  sovereign security), and letting the CSP drop `fonts.googleapis.com` and `fonts.gstatic.com`. The
+  unreferenced `app/fonts/Geist*.woff` files were deleted.

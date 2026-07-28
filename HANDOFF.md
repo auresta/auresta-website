@@ -17,7 +17,9 @@ PoC→production crossroads.
 ## 2. The website (`~/Projects/auresta-website`) — as-built
 
 **Stack:** Next.js 14 (App Router) + TypeScript + Tailwind 3.4. Brand = **dark + cyan**
-(`#080b14`/`#0f1623` surfaces, `#06b6d4` accent, `#3b82f6`), fonts Inter + JetBrains Mono. **Strict CSP**
+(`#080b14`/`#0f1623` surfaces, `#06b6d4` accent, `#3b82f6`), fonts Inter + JetBrains Mono — loaded via
+**`next/font/google` in `app/layout.tsx`** (self-hosted at build time; **do not re-add a webfont
+`@import` to `globals.css`** — the CSP no longer allows Google's origins). **Strict CSP**
 (`next.config.mjs`): `img-src 'self' data: blob:` — **external image/logo CDNs are blocked at runtime;
 all assets must be self-hosted in `public/`.** `style-src 'unsafe-inline'` (the site uses `style={{}}`
 freely). Remote: `github.com/auresta/auresta-website`, branch **main** (direct push OK; commits are

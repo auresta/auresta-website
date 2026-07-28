@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             {/* Social links */}
             <div className="flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/auresta" target="_blank" rel="noopener noreferrer"
+              <a href="https://www.linkedin.com/company/auresta-ai" target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center rounded-md transition-all hover:opacity-80"
                 style={{ width: 34, height: 34, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)", color: "#94a3b8" }}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
