@@ -55,7 +55,7 @@ const services = [
     title: "Security-by-Design Engineering",
     description:
       "Embedded security architecture for AI product teams. Threat modelling, prompt injection, model extraction, data leakage.",
-    price: "From $250/hr",
+    price: "Scoped per engagement",
     icon: <ShieldCheckIcon />,
   },
 ];
@@ -488,16 +488,18 @@ export default function HomePage() {
         }}
       >
         <div className="absolute inset-0 z-0">
-          <Image src="/images/office-tech.jpg" alt="Security assessment" fill className="object-cover" style={{ opacity: 0.25 }} />
+          <Image src="/images/office-tech.jpg" alt="Platform walkthrough" fill className="object-cover" style={{ opacity: 0.25 }} />
           <div className="absolute inset-0" style={{ background: "rgba(8,11,20,0.88)" }} />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-text-primary mb-4">
-            Ready to know where you stand?
+            Ready to see it in your environment?
           </h2>
           <p className="text-text-secondary mb-8 text-lg">
-            Book a free 30-minute security assessment. No obligation, no sales
-            pressure — just an honest baseline.
+            Book a 30-minute walkthrough. We&apos;ll map SecureForge and Shannon
+            Engine to the obligations you actually carry, and show you what
+            continuous compliance looks like in practice — no obligation, no
+            sales pressure.
           </p>
           <a
             href="https://calendly.com/team-auresta/30min"
@@ -506,7 +508,7 @@ export default function HomePage() {
             className="inline-flex items-center justify-center px-8 py-4 rounded-md font-bold text-base transition-all hover:opacity-90"
             style={{ backgroundColor: "#06b6d4", color: "#080b14" }}
           >
-            Book a Free 30-Minute Security Assessment
+            Book a 30-Minute Platform Walkthrough
           </a>
         </div>
       </section>

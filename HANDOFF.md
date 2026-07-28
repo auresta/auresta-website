@@ -109,12 +109,19 @@ services, and renames "Security-by-Design Consulting" → "…Engineering". `nex
 `/` static) and the homepage now contains zero occurrences of "consult". **Do not apply to Microsoft
 until that branch is merged and live.**
 
+The branch also completes the two remaining services-first signals, at the user's request:
+**"From $250/hr"** → **"Scoped per engagement"** (an hourly rate is the strongest consultancy tell — the
+other two cards keep their fixed floors, `$3,500` / `$15,000`, which read as productised packages), and
+the bottom CTA banner **"Ready to know where you stand? / Book a Free 30-Minute Security Assessment"** →
+**"Ready to see it in your environment? / Book a 30-Minute Platform Walkthrough"**, same Calendly link.
+The homepage now contains **zero** occurrences of *consult*, *"/hr"* or *"free … assessment"*.
+
+**Note:** `components/ServiceCards.tsx` is **dead code** — nothing imports it; the homepage uses its own
+inline `services` array + `ServiceCardInline`. It was kept in sync anyway. Consider deleting it.
+
 **Suggested next action:** merge or revise `gtm/product-first-positioning`; then **the design-partner
 one-pager** (the revenue path — source material is §3 of the referral-pitch doc), the **Stone & Chalk
-outreach email**, plus any of the three website polish items. Two smaller positioning items were left
-deliberately untouched as commercial decisions: the **"From $250/hr"** price on the homepage services
-card, and the bottom CTA banner (**"Book a Free 30-Minute Security Assessment"**) — both still read
-services-first if you want to go further.
+outreach email**, plus any of the three website polish items.
 
 ## 4. How to work (mechanics that matter)
 
