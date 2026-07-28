@@ -87,10 +87,10 @@ edit the application after submitting.
 
 | Field | Value |
 |---|---|
-| Registered startup name | `<FILL — exact ASIC-registered name, e.g. "Auresta Pty Ltd">`. **Must match your legal documents**, not the trading brand. |
+| Registered startup name | **`Auresta Pty Ltd`** (ABN 72 690 869 820) — as published in the site footer. **Must match your legal documents**, not the trading brand. Confirm against the ASIC record before submitting. |
 | Primary industry | Dropdown. Choose the closest of *Security* / *Information Technology* / *Software*. Do **not** choose a consulting or professional-services category. |
-| Website | `https://auresta.com.au` (once product-first is live). If you want the strongest single page, `https://auresta.com.au/products/secureforge`. |
-| Registered business address | `<FILL — ASIC-registered address; must match the Azure billing country>` |
+| Website | `https://auresta.com.au` (product-first repositioning is now live on main). If you want the strongest single page, `https://auresta.com.au/products/secureforge`. |
+| Registered business address | **`Level 12, 350 Collins Street, Melbourne VIC 3000, Australia`** — as published in the site footer. Must match the Azure billing country (Australia). |
 
 ### Azure account creation *(both paths)*
 
@@ -147,8 +147,9 @@ by email.
 
 ## 8. Recommended sequence
 
-1. ✅ Reposition the website product-first — *done 2026-07-28, see the branch referenced in §3*.
-2. Confirm the exact ASIC-registered name and address; fill every `<FILL>` above.
+1. ✅ Reposition the website product-first — *done 2026-07-28, merged and live on main*.
+2. ✅ Registered name and address sourced from the site footer (**Auresta Pty Ltd**, ABN 72 690 869 820,
+   Level 12/350 Collins St, Melbourne VIC 3000). Only the contact `<FILL>`s remain.
 3. Create the fresh personal Microsoft account.
 4. **In parallel:** pursue a referral code — [accelerator referral pitch](2026-07-28-accelerator-referral-pitch.md).
    Waiting a fortnight for a code is worth far more than $5,000 of self-serve credit, and the code
