@@ -96,30 +96,46 @@ We are onboarding design partners across regulated Australian industries. aurest
 If you need to trim further, cut the SHANNON ENGINE paragraph before the SOCI framing — the
 regulatory problem statement is what makes a stranger keep reading.
 
-## 5. Specialties (up to 20)
+## 5. Specialties (exactly 20 — LinkedIn's maximum)
+
+Enter in this order; LinkedIn displays them in the order added, so the highest-value terms lead.
 
 ```
 Internal Developer Platform
+Platform Engineering
+DevSecOps
+Compliance Automation
+Continuous Compliance
 Policy as Code
-SOCI Act CIRMP
 ACSC Essential Eight
+SOCI Act CIRMP
+Critical Infrastructure Security
 Cyber Security Act 2024
 Kubernetes Security
-Supply Chain Security
+Cloud Native Security
+Software Supply Chain Security
 SBOM
-Sigstore
+Zero Trust Architecture
 GitOps
-Zero Trust
-Cloud Security Posture
-Compliance Automation
 Data Sovereignty
-5G Network Function Security
-Platform Engineering
-Crossplane
-Continuous Compliance
+Red Teaming
 Adversary Simulation
-Australian Critical Infrastructure
+5G Network Security
 ```
+
+**Why these.** Specialties feed LinkedIn's search index, so each slot should be a phrase a buyer would
+actually type. Deliberately **excluded**: `Sigstore`, `Crossplane`, `OPA` and similar tool names — they
+are what we build *with*, carry almost no search volume, and are better placed in posts and the website
+than in 1 of only 20 slots. Also excluded: anything using *audit*, *assessment* or *consulting*, for the
+same reason the homepage was repositioned — LinkedIn is a page a Microsoft or accelerator reviewer will
+look at.
+
+`Red Teaming` and `Adversary Simulation` both earn a slot because they map to Shannon Engine as a
+product capability, not to a services engagement.
+
+**Swap candidates** if you'd rather signal to technical buyers than to search: replace
+`Cyber Security Act 2024` and `5G Network Security` (narrowest reach of the twenty) with `Crossplane`
+and `Sigstore`.
 
 ## 6. After the page exists — the bit people skip
 
