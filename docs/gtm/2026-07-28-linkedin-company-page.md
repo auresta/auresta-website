@@ -71,28 +71,30 @@ record and any procurement due diligence.
 *110 characters.* It states the category, the market, and the wedge — and deliberately avoids
 "consulting", "services" and "assessments".
 
-## 4. About section (2,000-character limit)
+## 4. About / description (2,000-character limit)
 
-Paste as-is:
+**Verified 1,966 characters** (1,978 if the paste converts newlines to CRLF). An earlier draft of
+this section was **2,093 characters and would have been silently truncated mid-sentence** — LinkedIn
+does not warn you. Re-count before editing it. Paste exactly as-is:
 
-> Auresta builds sovereign security software for regulated Australian organisations.
->
-> For operators covered by the SOCI Act, security compliance has become a periodic audit panic: manual evidence-gathering, drift between what was approved and what is actually running, and delivery teams slowed by gate-keeping. The obligations keep growing — the SOCI Act's Critical Infrastructure Risk Management Program, the ACSC Essential Eight, and the Cyber Security Act 2024 — but the tooling to satisfy them continuously has not existed as a product. Enterprises assemble it by hand, or they don't.
->
-> We build the platforms that close that gap.
->
-> SECUREFORGE IDP — an internal developer platform that makes insecure configuration unexpressible. Developers self-serve from golden-path templates with encryption, IAM-only authentication, image signing and network policy already embedded. Policy-as-code checks every deployment at admission against Essential Eight and SOCI controls, so non-compliant workloads never reach production. Keyless signing and SBOMs gate the supply chain. Declarative infrastructure provisions databases, clusters and networks with private networking, encryption and backups built in — the same blueprint on any cloud. The result is a live compliance posture and a tamper-proof audit trail: evidence is generated, not gathered.
->
-> SHANNON ENGINE — an AI-driven red team that never stops. Autonomous agents rehearse full attack chains end to end, so gaps surface on your schedule rather than an adversary's.
->
-> What makes us different: Australian data sovereignty is designed in, not bolted on — sensitive data stays onshore, and the architecture is hybrid because of it. We govern cloud-native workloads and containerised 5G network functions alike. And we are CNCF-native rather than a proprietary black box, composing and hardening the open-source tools platform teams already trust.
->
-> Auresta is Australian-owned and independent. Auresta Pty Ltd, ACN 690 869 820, Melbourne.
->
-> We are onboarding a small number of design partners across regulated Australian industries. auresta.com.au
+```text
+Auresta builds sovereign security software for regulated Australian organisations.
 
-*~1,950 characters including the `<FILL>`.* If you trim, cut the Shannon paragraph before the SOCI
-framing — the regulatory problem statement is what makes a stranger keep reading.
+For SOCI-regulated operators, compliance has become a periodic audit panic: manual evidence-gathering, drift between what was approved and what is running, and delivery teams slowed by gate-keeping. The obligations keep growing — the SOCI Act's Critical Infrastructure Risk Management Program, the ACSC Essential Eight, and the Cyber Security Act 2024 — but the tooling to satisfy them continuously has not existed as a product. Enterprises assemble it by hand, or they don't.
+
+SECUREFORGE IDP — an internal developer platform that makes insecure configuration unexpressible. Developers self-serve from golden-path templates with encryption, IAM-only authentication, image signing and network policy already embedded. Policy-as-code checks every deployment at admission against Essential Eight and SOCI controls, so non-compliant workloads never reach production. Keyless signing and SBOMs gate the supply chain. Declarative infrastructure provisions databases, clusters and networks with private networking, encryption and backups built in, on any cloud. The result is a live compliance posture and a tamper-proof audit trail: evidence is generated, not gathered.
+
+SHANNON ENGINE — an AI-driven red team that never stops. Autonomous agents rehearse full attack chains end to end, so gaps surface on your schedule rather than an adversary's.
+
+What makes us different: Australian data sovereignty is designed in, not bolted on — sensitive data stays onshore, and the architecture is hybrid because of it. We govern cloud-native workloads and containerised 5G network functions alike. And we are CNCF-native, not a proprietary black box — we compose and harden the open-source tools platform teams already trust.
+
+Auresta Pty Ltd is Australian-owned and independent. ACN 690 869 820, Melbourne.
+
+We are onboarding design partners across regulated Australian industries. auresta.com.au
+```
+
+If you need to trim further, cut the SHANNON ENGINE paragraph before the SOCI framing — the
+regulatory problem statement is what makes a stranger keep reading.
 
 ## 5. Specialties (up to 20)
 
